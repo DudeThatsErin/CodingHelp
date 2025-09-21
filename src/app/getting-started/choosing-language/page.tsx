@@ -9,7 +9,7 @@ const languageComparisons = [
     jobMarket: 'Excellent',
     useCases: ['Web Development', 'Data Science', 'AI/ML', 'Automation'],
     pros: ['Easy to read', 'Versatile', 'Large community', 'Great for beginners'],
-    cons: ['Slower execution', 'Mobile development limitations'],
+    cons: ['Slightly slower execution then other programming languages', 'Mobile development limitations'],
     icon: '🐍',
     color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
   },
@@ -20,7 +20,7 @@ const languageComparisons = [
     jobMarket: 'Excellent',
     useCases: ['Web Development', 'Mobile Apps', 'Desktop Apps', 'Backend'],
     pros: ['Essential for web', 'Versatile', 'Huge ecosystem', 'High demand'],
-    cons: ['Can be confusing', 'Rapid changes', 'Browser compatibility'],
+    cons: ['Can be confusing', 'Rapid changes', 'Might face compatibility issues with older/lesser known browsers'],
     icon: '🟨',
     color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
   },
@@ -41,7 +41,7 @@ const languageComparisons = [
     timeToLearn: '4-5 months',
     jobMarket: 'Very Good',
     useCases: ['Windows Apps', 'Web Development', 'Games', 'Enterprise'],
-    pros: ['Microsoft ecosystem', 'Strong typing', 'Good tooling', 'Versatile'],
+    pros: ['Microsoft ecosystem', 'Strong typing', 'Good tooling', 'Versatile', 'options for easy ui in the form of winforms'],
     cons: ['Windows-centric', 'Learning curve', 'Microsoft dependency'],
     icon: '🔷',
     color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
