@@ -114,11 +114,11 @@ export default function HomePage() {
                   <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gray-700 flex-shrink-0">
                     {card.icon}
                   </div>
-                  <h3 className="text-sm md:text-base font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-sm md:text-base font-semibold text-white">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-xs md:text-sm text-gray-300">
                   {card.description}
                 </p>
               </div>
@@ -129,10 +129,10 @@ export default function HomePage() {
 
       {/* Community Section */}
       <div className="bg-gray-800 rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6 border border-gray-700">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+        <h2 className="text-xl md:text-2xl font-bold text-white dark:text-white">
           Join Our Community
         </h2>
-        <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="text-sm md:text-base text-white max-w-2xl mx-auto">
           Connect with fellow developers, get help with your coding questions, and share your knowledge 
           with others in our supportive community.
         </p>

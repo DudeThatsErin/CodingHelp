@@ -1,4 +1,5 @@
 import { InfoCardProps } from './types';
+import { ExternalLink } from 'lucide-react';
 
 const variantStyles = {
   blue: 'bg-blue-50 dark:bg-blue-900/40 border-blue-200 dark:border-blue-700 text-blue-900 dark:text-blue-50',
@@ -15,19 +16,43 @@ const variantStyles = {
 export function InfoCard({ 
   title, 
   children, 
+  description,
   icon, 
-  variant = 'blue', 
+  variant, 
+  color, // Support color as alias for variant
+  link,
+  external = false,
   className = "" 
 }: InfoCardProps) {
-  return (
-    <div className={`rounded-lg p-6 border ${variantStyles[variant]} ${className}`}>
+  // Use color as fallback for variant for backward compatibility
+  const cardVariant = variant || color || 'blue';
+  
+  const cardContent = (
+    <div className={`rounded-lg p-6 border ${variantStyles[cardVariant]} ${className} ${link ? 'hover:shadow-md transition-shadow cursor-pointer' : ''}`}>
       <h3 className="text-lg font-semibold mb-4 flex items-center">
         {icon && <span className="mr-2">{icon}</span>}
         {title}
+        {link && external && <ExternalLink className="w-4 h-4 ml-2" />}
       </h3>
       <div>
+        {description && <p className="text-sm opacity-90 mb-2">{description}</p>}
         {children}
       </div>
     </div>
   );
+
+  if (link) {
+    return (
+      <a 
+        href={link} 
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        className="block no-underline"
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  return cardContent;
 }

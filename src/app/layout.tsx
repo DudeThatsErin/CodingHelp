@@ -66,15 +66,17 @@ export default function RootLayout({
         <SpeedInsights />
         <ThemeProvider>
           <SearchProvider>
-            <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
-              <Header />
-              <div className="flex flex-1">
-                <Sidebar />
-                <main className="flex-1 p-2 sm:p-4 lg:p-6 overflow-y-auto">
+            <div className="min-h-screen bg-white dark:bg-gray-900 flex">
+              <div className="w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
+                <Sidebar className='fixed top-0 left-0 w-64 overflow-y-auto' />
+              </div>
+              <div className="flex-1 flex flex-col">
+                <Header />
+                <main className="flex-1 p-2 sm:p-4 lg:p-6 overflow-auto">
                   {children}
                 </main>
+                <Footer />
               </div>
-              <Footer />
             </div>
             <SearchModal />
           </SearchProvider>

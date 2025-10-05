@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github, Zap, Smile, Heart } from 'lucide-react';
+import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github, Zap } from 'lucide-react';
 import { PageLayout } from '@/components/PageLayout';
-import { QuickStats } from '@/components/QuickStats';
-import { InfoCard } from '@/components/InfoCard';
 
 interface BotCommand {
   name: string;
@@ -94,7 +92,7 @@ export default function BotCommandsPage() {
   useEffect(() => {
     const loadCommands = async () => {
       try {
-        const response = await fetch('/bot-commands-fixed.json');
+        const response = await fetch('/bot-commands.json');
         const data = await response.json();
         setCommandData(data);
         setCategories(processCommandData(data));
@@ -193,7 +191,7 @@ export default function BotCommandsPage() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="text-blue-600">{category.icon}</div>
+                      <div className="text-gray-700 dark:text-gray-300">{category.icon}</div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           {category.title}

@@ -146,14 +146,14 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
   };
 
   return (
-    <aside className={`w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto ${className}`}>
+    <aside className={className}>
       <nav className="p-4">
         <ul className="space-y-2">
           {sidebarItems.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                   isActive(item.href) || hasActiveChild(item)
                     ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
                     : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
@@ -169,7 +169,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                     <li key={child.href}>
                       <Link
                         href={child.href}
-                        className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
+                        className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-base transition-colors ${
                           isActive(child.href)
                             ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
                             : 'text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800/50'

@@ -14,7 +14,11 @@ export type InfoCardVariant =
 export interface InfoCardProps {
   title: string;
   variant?: InfoCardVariant;
+  color?: InfoCardVariant; // Alias for variant for backward compatibility
   icon?: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
+  description?: string;
+  link?: string;
+  external?: boolean;
   className?: string;
 }

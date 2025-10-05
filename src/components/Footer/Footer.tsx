@@ -6,20 +6,20 @@ import { FooterProps } from './types';
 
 export function Footer({ children, className = '' }: FooterProps) {
   return (
-    <footer className={`bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-6 ${className}`}>
+    <footer className={`w-full bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 ${className}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12">
           {/* About Section */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              OneNote Wiki
+              CodingHelp Wiki
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              A comprehensive OneNote resource for users of all skill levels. 
-              Learn, organize, and collaborate with our community-driven content.
+              A comprehensive programming resource for developers of all skill levels. 
+              Learn, build, and grow with our community-driven content.
             </p>
             <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-              <span>Made with ❤️ by the OneNote community</span>
+              <span>Made with ❤️ by the CodingHelp community</span>
             </div>
           </div>
 
@@ -65,7 +65,7 @@ export function Footer({ children, className = '' }: FooterProps) {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-4">
                 <a
-                  href="https://discord.gg/codinghelp"
+                  href="https://discord.gg/geQEUBm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
@@ -87,13 +87,24 @@ export function Footer({ children, className = '' }: FooterProps) {
               </div>
               <div className="flex items-center space-x-4">
                 <a
-                  href="https://github.com/codinghelp-community"
+                  href="https://github.com/CodingHelp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
                 >
                   <Github className="w-5 h-5" />
-                  <span className="text-sm">GitHub</span>
+                  <span className="text-sm">Wiki GitHub</span>
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://github.com/CodingHelpBot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                  <span className="text-sm">Bot GitHub</span>
                 </a>
               </div>
             </div>

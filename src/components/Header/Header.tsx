@@ -6,6 +6,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
+import { SearchButton } from '@/components/SearchButton';
 import { HeaderProps } from './types';
 
 export function Header({ children, className = '' }: HeaderProps) {
@@ -50,6 +51,11 @@ export function Header({ children, className = '' }: HeaderProps) {
             >
               Resources
             </Link>
+            
+            {/* Search */}
+            <div className="flex items-center">
+              <SearchButton />
+            </div>
             
             {/* Social Links */}
             <div className="flex items-center space-x-3 border-l border-gray-200 dark:border-gray-700 pl-6">
@@ -138,6 +144,11 @@ export function Header({ children, className = '' }: HeaderProps) {
               >
                 Resources
               </Link>
+              
+              {/* Mobile Search */}
+              <div className="pt-2">
+                <SearchButton />
+              </div>
               
               {/* Mobile Social Links */}
               <div className="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
