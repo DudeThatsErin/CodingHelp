@@ -4,9 +4,9 @@ import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { SearchProvider } from '@/contexts/SearchContext';
 import { SearchModal } from '@/components/SearchModal';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import Footer from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Sidebar } from '@/components/Sidebar';
+import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
