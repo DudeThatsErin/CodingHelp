@@ -1,0 +1,72 @@
+{
+  "prefix_commands": {
+    "Challenge System Commands": {
+      "description": "Commands for participating in and managing coding challenges",
+      "icon": "hash",
+      "commands": [
+        {
+          "name": "leaderboard",
+          "description": "This gives users the ability to see the top 10 users on the leaderboard and also their position on the leaderboard.",
+          "aliases": ["ldbd", "challenge-leaderboard", "cleaderboard", "cldbd", "lbd", "ldb"],
+          "usage": "++leaderboard",
+          "example": "++leaderboard or ++ldb or ++lbd"
+        },
+        {
+          "name": "submit",
+          "description": "This is how users can submit answers to the challenge questions.",
+          "aliases": ["submits", "answer"],
+          "usage": "++submit [challenge number] [answer]",
+          "example": "++submit 1 console.log('Hello World');"
+        }
+      ]
+    },
+    "Admin Commands": {
+      "description": "Administrative commands for server management",
+      "icon": "settings",
+      "commands": [
+        {
+          "name": "createcommands",
+          "description": "Allows Erin to create the Slash Commands.",
+          "aliases": ["startslash", "create-commands", "cc"],
+          "usage": "++createcommands",
+          "example": "++createcommands"
+        }
+      ]
+    }
+  },
+  "slash_commands": {
+    "General Commands": {
+      "description": "General help and learning commands",
+      "icon": "help-circle",
+      "commands": [
+        {
+          "name": "help",
+          "description": "This allows users to find out more information on all of our commands.",
+          "aliases": [],
+          "usage": "/help or /help [command name here]",
+          "example": "/help or /help algorithm"
+        },
+        {
+          "name": "algorithm",
+          "description": "Get algorithm solutions and explanations for common problems.",
+          "aliases": [],
+          "usage": "/algorithm <problem>",
+          "example": "/algorithm sorting"
+        }
+      ]
+    },
+    "Admin Commands": {
+      "description": "Administrative commands for server management",
+      "icon": "settings",
+      "commands": [
+        {
+          "name": "bot-status",
+          "description": "Pushes an embed to display in the channel about a bot update",
+          "aliases": [],
+          "usage": "/bot-status <message>",
+          "example": "/bot-status Fixed a bug in the help command"
+        }
+      ]
+    }
+  }
+}

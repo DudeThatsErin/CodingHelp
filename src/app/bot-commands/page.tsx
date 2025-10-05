@@ -1,161 +1,112 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github } from 'lucide-react';
+import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github, Zap, Smile, Heart } from 'lucide-react';
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 
-const commandCategories = [
-  {
-    id: 'help',
-    title: 'Help & Support Commands',
-    icon: <HelpCircle className="w-5 h-5" />,
-    description: 'Get help with coding questions and find resources',
-    commands: [
-      {
-        name: '/ask',
-        description: 'Ask a coding question and get help from the community',
-        usage: '/ask [language] [question]',
-        example: '/ask javascript How do I create a function?',
-        parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language (javascript, python, java, etc.)' },
-          { name: 'question', type: 'string', required: true, description: 'Your coding question' }
-        ]
-      },
-      {
-        name: '/resources',
-        description: 'Get learning resources for a specific programming language',
-        usage: '/resources [language]',
-        example: '/resources python',
-        parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' }
-        ]
-      },
-      {
-        name: '/docs',
-        description: 'Get official documentation links for programming languages and frameworks',
-        usage: '/docs [technology]',
-        example: '/docs react',
-        parameters: [
-          { name: 'technology', type: 'string', required: true, description: 'Technology or framework name' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'code',
-    title: 'Code Utility Commands',
-    icon: <MessageCircle className="w-5 h-5" />,
-    description: 'Useful tools for code formatting, analysis, and snippets',
-    commands: [
-      {
-        name: '/format',
-        description: 'Format and beautify code snippets',
-        usage: '/format [language] [code]',
-        example: '/format javascript const x=1;console.log(x);',
-        parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language for syntax highlighting' },
-          { name: 'code', type: 'string', required: true, description: 'Code to format' }
-        ]
-      },
-      {
-        name: '/explain',
-        description: 'Get an explanation of what a code snippet does',
-        usage: '/explain [language] [code]',
-        example: '/explain python def fibonacci(n): return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)',
-        parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' },
-          { name: 'code', type: 'string', required: true, description: 'Code snippet to explain' }
-        ]
-      },
-      {
-        name: '/snippet',
-        description: 'Get common code snippets for various tasks',
-        usage: '/snippet [language] [task]',
-        example: '/snippet javascript array sort',
-        parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' },
-          { name: 'task', type: 'string', required: true, description: 'What you want to accomplish' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'community',
-    title: 'Community Commands',
-    icon: <Users className="w-5 h-5" />,
-    description: 'Interact with the community and manage your profile',
-    commands: [
-      {
-        name: '/profile',
-        description: 'View or update your coding profile',
-        usage: '/profile [action] [details]',
-        example: '/profile set languages javascript,python,java',
-        parameters: [
-          { name: 'action', type: 'string', required: true, description: 'Action: view, set, or update' },
-          { name: 'details', type: 'string', required: false, description: 'Profile details to update' }
-        ]
-      },
-      {
-        name: '/leaderboard',
-        description: 'View community leaderboards for helpful members',
-        usage: '/leaderboard [type]',
-        example: '/leaderboard weekly',
-        parameters: [
-          { name: 'type', type: 'string', required: false, description: 'Leaderboard type: daily, weekly, monthly, all-time' }
-        ]
-      },
-      {
-        name: '/thanks',
-        description: 'Thank someone for their help',
-        usage: '/thanks @user [message]',
-        example: '/thanks @helper Thanks for the JavaScript help!',
-        parameters: [
-          { name: 'user', type: 'user', required: true, description: 'User to thank' },
-          { name: 'message', type: 'string', required: false, description: 'Optional thank you message' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'utility',
-    title: 'Utility Commands',
-    icon: <Settings className="w-5 h-5" />,
-    description: 'General utility commands for server management and information',
-    commands: [
-      {
-        name: '/ping',
-        description: 'Check bot response time and status',
-        usage: '/ping',
-        example: '/ping',
-        parameters: []
-      },
-      {
-        name: '/stats',
-        description: 'View server statistics and bot information',
-        usage: '/stats [type]',
-        example: '/stats server',
-        parameters: [
-          { name: 'type', type: 'string', required: false, description: 'Stats type: server, bot, or user' }
-        ]
-      },
-      {
-        name: '/suggest',
-        description: 'Suggest new features or improvements for the bot',
-        usage: '/suggest [suggestion]',
-        example: '/suggest Add support for Rust programming language',
-        parameters: [
-          { name: 'suggestion', type: 'string', required: true, description: 'Your suggestion or feature request' }
-        ]
-      }
-    ]
-  }
-];
+interface BotCommand {
+  name: string;
+  description: string;
+  aliases: string[];
+  usage: string;
+  example: string;
+}
+
+interface CategoryData {
+  description: string;
+  icon: string;
+  commands: BotCommand[];
+}
+
+interface CommandData {
+  prefix_commands: {
+    [category: string]: CategoryData;
+  };
+  slash_commands: {
+    [category: string]: CategoryData;
+  };
+}
+
+interface CommandCategory {
+  id: string;
+  title: string;
+  icon: JSX.Element;
+  description: string;
+  commands: BotCommand[];
+  type: 'prefix' | 'slash';
+}
+
+// Function to get icon for category
+const getCategoryIcon = (iconName: string, type: 'prefix' | 'slash'): JSX.Element => {
+  const name = iconName.toLowerCase();
+  
+  if (name === 'settings') return <Settings className="w-5 h-5" />;
+  if (name === 'hash') return <Hash className="w-5 h-5" />;
+  if (name === 'help-circle') return <HelpCircle className="w-5 h-5" />;
+  if (name === 'message-circle') return <MessageCircle className="w-5 h-5" />;
+  if (name === 'users') return <Users className="w-5 h-5" />;
+  if (name === 'zap') return <Zap className="w-5 h-5" />;
+  
+  // Default icons
+  return type === 'prefix' ? <Hash className="w-5 h-5" /> : <Bot className="w-5 h-5" />;
+};
+
+// Function to process command data into categories
+const processCommandData = (data: CommandData): CommandCategory[] => {
+  const categories: CommandCategory[] = [];
+  
+  // Process prefix commands
+  Object.entries(data.prefix_commands).forEach(([categoryName, categoryData]) => {
+    categories.push({
+      id: `prefix-${categoryName.toLowerCase().replace(/\s+/g, '-')}`,
+      title: `${categoryName} (Prefix Commands)`,
+      icon: getCategoryIcon(categoryData.icon, 'prefix'),
+      description: categoryData.description,
+      commands: categoryData.commands,
+      type: 'prefix'
+    });
+  });
+  
+  // Process slash commands
+  Object.entries(data.slash_commands).forEach(([categoryName, categoryData]) => {
+    categories.push({
+      id: `slash-${categoryName.toLowerCase().replace(/\s+/g, '-')}`,
+      title: `${categoryName} (Slash Commands)`,
+      icon: getCategoryIcon(categoryData.icon, 'slash'),
+      description: categoryData.description,
+      commands: categoryData.commands,
+      type: 'slash'
+    });
+  });
+  
+  return categories;
+};
 
 export default function BotCommandsPage() {
+  const [commandData, setCommandData] = useState<CommandData | null>(null);
+  const [categories, setCategories] = useState<CommandCategory[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadCommands = async () => {
+      try {
+        const response = await fetch('/bot-commands-fixed.json');
+        const data = await response.json();
+        setCommandData(data);
+        setCategories(processCommandData(data));
+      } catch (error) {
+        console.error('Failed to load bot commands:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCommands();
+  }, []);
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -177,19 +128,14 @@ export default function BotCommandsPage() {
           <div className="text-4xl">🤖</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Discord Bot Commands</h1>
-            <div className="flex items-center gap-2">
-              <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full text-sm font-medium">
-                Coming Soon
-              </span>
-              <p className="text-gray-600 dark:text-gray-300">
-                CodingHelp Discord Bot command reference
-              </p>
-            </div>
+            <p className="text-gray-600 dark:text-gray-300">
+              CodingHelp Discord Bot command reference
+            </p>
           </div>
         </div>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          The CodingHelp Discord Bot is currently in development! Here's a preview of the commands 
-          that will be available to help you with coding questions, resources, and community interaction.
+          Our Discord bot provides helpful commands for coding challenges, community interaction, 
+          learning resources, and server management. Browse the categories below to find the commands you need.
         </p>
       </div>
 
@@ -230,8 +176,13 @@ export default function BotCommandsPage() {
           Command Categories
         </h2>
         
-        <div className="flex flex-col gap-4 md:gap-6">
-          {commandCategories.map((category) => {
+        {loading ? (
+          <div className="text-center py-8">
+            <p className="text-gray-600 dark:text-gray-300">Loading commands...</p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-4 md:gap-6">
+            {categories.map((category) => {
             const isExpanded = expandedCategories.includes(category.id);
             
             return (
@@ -303,28 +254,16 @@ export default function BotCommandsPage() {
                               </code>
                             </div>
                             
-                            {command.parameters.length > 0 && (
+                            {command.aliases && command.aliases.length > 0 && (
                               <div>
                                 <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
-                                  Parameters:
+                                  Aliases:
                                 </h4>
-                                <div className="flex flex-col gap-2">
-                                  {command.parameters.map((param, paramIndex) => (
-                                    <div key={paramIndex} className="flex items-start gap-3 text-sm">
-                                      <code className="text-blue-600 dark:text-blue-400 font-mono">
-                                        {param.name}
-                                      </code>
-                                      <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                                        param.required 
-                                          ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
-                                          : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-                                      }`}>
-                                        {param.required ? 'required' : 'optional'}
-                                      </span>
-                                      <span className="text-gray-600 dark:text-gray-300">
-                                        {param.description}
-                                      </span>
-                                    </div>
+                                <div className="flex flex-wrap gap-2">
+                                  {command.aliases.map((alias, aliasIndex) => (
+                                    <code key={aliasIndex} className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-gray-800 dark:text-gray-200">
+                                      {alias}
+                                    </code>
                                   ))}
                                 </div>
                               </div>
@@ -338,7 +277,8 @@ export default function BotCommandsPage() {
               </div>
             );
           })}
-        </div>
+          </div>
+        )}
       </section>
 
       {/* Development Status */}
@@ -356,10 +296,10 @@ export default function BotCommandsPage() {
               What's Ready:
             </h4>
             <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
-              <li>• Bot architecture and framework</li>
-              <li>• Command structure design</li>
-              <li>• Database integration planning</li>
-              <li>• Discord.js setup and configuration</li>
+              <li>Bot architecture and framework</li>
+              <li>Command structure design</li>
+              <li>Database integration planning</li>
+              <li>Discord.js setup and configuration</li>
             </ul>
           </div>
           <div>
@@ -367,10 +307,10 @@ export default function BotCommandsPage() {
               Coming Next:
             </h4>
             <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
-              <li>• Help and resource commands</li>
-              <li>• Code formatting and explanation</li>
-              <li>• Community interaction features</li>
-              <li>• Beta testing with community</li>
+              <li>Help and resource commands</li>
+              <li>Code formatting and explanation</li>
+              <li>Community interaction features</li>
+              <li>Beta testing with community</li>
             </ul>
           </div>
         </div>

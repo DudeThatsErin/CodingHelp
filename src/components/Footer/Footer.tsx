@@ -12,14 +12,14 @@ export function Footer({ children, className = '' }: FooterProps) {
           {/* About Section */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              CodingHelp Wiki
+              OneNote Wiki
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              A comprehensive programming resource for developers of all skill levels. 
-              Learn, build, and grow with our community-driven content.
+              A comprehensive OneNote resource for users of all skill levels. 
+              Learn, organize, and collaborate with our community-driven content.
             </p>
             <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-              <span>Made with ❤️ by the CodingHelp community</span>
+              <span>Made with ❤️ by the OneNote community</span>
             </div>
           </div>
 

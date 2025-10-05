@@ -146,7 +146,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
   };
 
   return (
-    <aside className={`w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 h-screen sticky top-16 overflow-y-auto ${className}`}>
+    <aside className={`w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto ${className}`}>
       <nav className="p-4">
         <ul className="space-y-2">
           {sidebarItems.map((item) => (

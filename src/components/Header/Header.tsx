@@ -40,12 +40,9 @@ export function Header({ children, className = '' }: HeaderProps) {
             </Link>
             <Link 
               href="/bot-commands" 
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors flex items-center space-x-1"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
             >
-              <span>Bot Commands</span>
-              <span className="text-xs px-2 py-0.5 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full">
-                Soon
-              </span>
+              Bot Commands
             </Link>
             <Link 
               href="/resources" 
@@ -129,13 +126,10 @@ export function Header({ children, className = '' }: HeaderProps) {
               </Link>
               <Link 
                 href="/bot-commands"
-                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors flex items-center space-x-2"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span>Bot Commands</span>
-                <span className="text-xs px-2 py-0.5 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full">
-                  Soon
-                </span>
+                Bot Commands
               </Link>
               <Link 
                 href="/resources"
