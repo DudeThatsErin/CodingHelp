@@ -42,6 +42,13 @@ export default function HelpSupportPage() {
       icon: <Book className="w-6 h-6" />,
       link: '/getting-started',
       color: 'green'
+    },
+    {
+      title: 'How to Share Code',
+      description: 'Learn the best practices for asking questions and sharing code in our community.',
+      icon: <HelpCircle className="w-6 h-6" />,
+      link: '/how-to-share-code',
+      color: 'purple'
     }
   ];
 
@@ -169,7 +176,7 @@ export default function HelpSupportPage() {
             {faqItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6"
+                className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 p-6"
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
                   <HelpCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -184,7 +191,7 @@ export default function HelpSupportPage() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 text-center">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg p-8 text-center">
           <Users className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Still need help?

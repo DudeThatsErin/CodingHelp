@@ -38,10 +38,6 @@ export default function GettingStartedPage() {
       title="Getting Started"
       description="Welcome to your programming journey! This section will guide you through the basics of programming, from understanding what programming is to writing your first program."
       icon={<BookOpen className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/getting-started/what-is-programming",
-        label: "Start: What is Programming?"
-      }}
     >
 
       {/* Learning Path */}
@@ -54,7 +50,7 @@ export default function GettingStartedPage() {
             <Link
               key={step.href}
               href={step.href}
-              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 transition-all hover:border-gray-600"
+              className="block p-6 bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200/50 dark:border-gray-700 transition-all hover:border-gray-600"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

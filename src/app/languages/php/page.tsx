@@ -72,7 +72,7 @@ export default function PHPPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {phpFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -88,8 +88,8 @@ export default function PHPPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           PHP Code Example
         </h2>
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-4">
             🚀 Basic PHP Web Application
           </h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
@@ -138,42 +138,41 @@ foreach ($users as $user) {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with PHP
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Install PHP</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Install PHP</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Download from php.net or use XAMPP/WAMP for local development</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Set Up Web Server</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Set Up Web Server</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Use Apache, Nginx, or PHP's built-in server for development</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Script</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Write Your First Script</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Create a .php file with &lt;?php echo "Hello, World!"; ?&gt;</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Basics</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Learn the Basics</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Master variables, arrays, functions, and database integration</p>
             </div>
           </div>
         </div>
       </div>
-
     </PageLayout>
   );
 }

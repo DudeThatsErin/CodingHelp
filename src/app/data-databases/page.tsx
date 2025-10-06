@@ -10,7 +10,7 @@ const databaseCategories = [
     examples: ['PostgreSQL', 'MySQL', 'SQLite', 'SQL Server'],
     href: '/data-databases/sql',
     icon: <Table className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'NoSQL Databases',
@@ -18,7 +18,7 @@ const databaseCategories = [
     examples: ['MongoDB', 'Redis', 'Cassandra', 'DynamoDB'],
     href: '/data-databases/nosql',
     icon: <Database className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Data Analysis',
@@ -26,7 +26,7 @@ const databaseCategories = [
     examples: ['Python/Pandas', 'R', 'Excel', 'Tableau'],
     href: '/data-databases/analysis',
     icon: <BarChart className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -45,10 +45,6 @@ export default function DataDatabasesPage() {
       title="Data & Databases"
       description="Learn how to store, retrieve, and manage data effectively. From SQL databases to NoSQL solutions and data modeling best practices."
       icon={<Database className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/data-databases/sql",
-        label: "Start: SQL Databases"
-      }}
     >
 
       <QuickStats 
@@ -127,7 +123,7 @@ export default function DataDatabasesPage() {
               
               <div className="flex flex-wrap gap-1">
                 {category.examples.map((example, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
                     {example}
                   </span>
                 ))}
@@ -142,7 +138,7 @@ export default function DataDatabasesPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
           Database Types Overview
         </h2>
-        <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden py-4">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden py-4">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-900">
@@ -191,7 +187,7 @@ export default function DataDatabasesPage() {
           Essential Concepts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[0.5rem]">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Database Design</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Entity-Relationship (ER) modeling</li>
@@ -202,7 +198,7 @@ export default function DataDatabasesPage() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Performance</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Query optimization</li>
@@ -213,7 +209,7 @@ export default function DataDatabasesPage() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Security</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Authentication and authorization</li>
@@ -224,7 +220,7 @@ export default function DataDatabasesPage() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Scaling</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Horizontal vs vertical scaling</li>
@@ -268,7 +264,7 @@ export default function DataDatabasesPage() {
           Popular Tools & Technologies
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[0.5rem]">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">SQL Databases:</h4>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>PostgreSQL</li>
@@ -277,7 +273,7 @@ export default function DataDatabasesPage() {
               <li>SQL Server</li>
             </ul>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">NoSQL Databases:</h4>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>MongoDB</li>
@@ -286,7 +282,7 @@ export default function DataDatabasesPage() {
               <li>DynamoDB</li>
             </ul>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Analysis Tools:</h4>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Python/Pandas</li>
@@ -295,7 +291,7 @@ export default function DataDatabasesPage() {
               <li>Power BI</li>
             </ul>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Cloud Services:</h4>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>AWS RDS</li>

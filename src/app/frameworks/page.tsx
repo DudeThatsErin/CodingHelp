@@ -9,7 +9,7 @@ const frameworkCategories = [
     examples: ['React', 'Vue.js', 'Angular', 'Svelte'],
     href: '/frameworks/frontend',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Backend Frameworks',
@@ -17,7 +17,7 @@ const frameworkCategories = [
     examples: ['Express.js', 'Django', 'Laravel', 'ASP.NET Core'],
     href: '/frameworks/backend',
     icon: <Server className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Full Stack Frameworks',
@@ -25,7 +25,7 @@ const frameworkCategories = [
     examples: ['Next.js', 'Nuxt.js', 'Ruby on Rails', 'Gatsby'],
     href: '/frameworks/fullstack',
     icon: <Layers className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Mobile Frameworks',
@@ -33,7 +33,7 @@ const frameworkCategories = [
     examples: ['React Native', 'Flutter', 'Expo', 'Ionic'],
     href: '/frameworks/mobile',
     icon: <Smartphone className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'CSS Frameworks',
@@ -41,7 +41,7 @@ const frameworkCategories = [
     examples: ['Bootstrap', 'Tailwind CSS', 'Bulma', 'Foundation'],
     href: '/frameworks/css',
     icon: <Palette className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -65,7 +65,7 @@ export default function FrameworksPage() {
     >
 
       {/* What is a Framework */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
           What is a Framework?
         </h3>
@@ -114,7 +114,7 @@ export default function FrameworksPage() {
             <Link
               key={category.href}
               href={category.href}
-              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-gray-600 transition-all"
+              className="block p-6 bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-all"
             >
               <div className="flex items-start flex flex-col gap-8 md:gap-124">
                 <div className="flex-shrink-0">
@@ -277,7 +277,7 @@ export default function FrameworksPage() {
           <Link
             key={category.href}
             href={category.href}
-            className="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            className="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-50/50 dark:bg-gray-800 transition-colors"
           >
             <div className="text-gray-600 dark:text-gray-400 mb-2">{category.icon}</div>
             <span className="text-sm font-medium text-gray-900 dark:text-white text-center">

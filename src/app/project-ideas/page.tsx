@@ -123,19 +123,19 @@ export default function ProjectIdeasPage() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">240+</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Total Projects</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">8</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Languages</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">3</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Difficulty Levels</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
           <div className="text-2xl font-bold text-gray-900 dark:text-white">30</div>
           <div className="text-sm text-gray-600 dark:text-gray-400">Projects per Language</div>
         </div>
@@ -148,7 +148,7 @@ export default function ProjectIdeasPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectCategories.map((category, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-gray-600 dark:text-gray-400">{category.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -181,7 +181,7 @@ export default function ProjectIdeasPage() {
           iPhone App Development
         </h2>
         
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
           <div className="flex items-start flex flex-col gap-3">
             <div className="text-4xl">📱</div>
             <div className="flex-1">
@@ -258,7 +258,7 @@ export default function ProjectIdeasPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {languages.map((language, index) => (
             <Link key={index} href={language.href} className="block group">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 hover:shadow-lg">
+              <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 hover:shadow-lg">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl">{language.icon}</span>
@@ -305,7 +305,7 @@ export default function ProjectIdeasPage() {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Best Practices</h3>
             <ul className="text-gray-700 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Start with beginner projects to build confidence</li>
@@ -317,7 +317,7 @@ export default function ProjectIdeasPage() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Learning Tips</h3>
             <ul className="text-gray-700 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Break large projects into smaller tasks</li>
@@ -332,7 +332,7 @@ export default function ProjectIdeasPage() {
       </section>
 
       {/* Call to Action */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
             Ready to Start Building?

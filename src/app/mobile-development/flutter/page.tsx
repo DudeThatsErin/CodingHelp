@@ -70,7 +70,7 @@ export default function FlutterPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-1">
           {flutterFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 mb-1">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 mb-1">
               <div className="flex items-center gap-3 mb-3 mb-1">
                 <div className="text-blue-600 mb-1">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{feature.title}</h3>
@@ -86,7 +86,7 @@ export default function FlutterPage() {
       <section className="flex flex-col gap-6 md:gap-8 mb-1">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">Getting Started</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-1">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg mb-1">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4 mb-1">Installation</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded mb-1">
 {`# Install Flutter SDK
@@ -111,7 +111,7 @@ flutter run`}
       <section className="flex flex-col gap-6 md:gap-8 mb-1">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">Basic Flutter App</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-1">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg mb-1">
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded mb-1">
 {`import 'package:flutter/material.dart';
 
@@ -186,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-1">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-1">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 mb-1">
             <h3 className="font-semibold text-white mb-3 mb-1">Official Resources</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2 mb-1">
               <li>• <a href="https://flutter.dev/" className="hover:underline mb-1">Flutter Official Site</a></li>
@@ -196,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-1">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 mb-1">
             <h3 className="font-semibold text-white mb-3 mb-1">Popular Packages</h3>
             <ul className="text-green-800 dark:text-green-200 text-sm flex flex-col gap-2 mb-1">
               <li>• <a href="https://pub.dev/packages/http" className="hover:underline mb-1">HTTP (Networking)</a></li>
@@ -213,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">Project Ideas</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-1">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 mb-1">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 mb-1">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 mb-1">Beginner Projects</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2 mb-1">
               <li>• Counter App with State Management</li>
@@ -224,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 mb-1">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 mb-1">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3 mb-1">Advanced Projects</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2 mb-1">
               <li>• E-commerce App with Payment Integration</li>
@@ -238,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
       </section>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700 mb-1">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700 mb-1">
         <Link
           href="/mobile-development"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mb-1"

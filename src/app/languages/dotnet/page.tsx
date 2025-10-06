@@ -117,7 +117,7 @@ export default function DotNetPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {dotnetFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-indigo-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -135,7 +135,7 @@ export default function DotNetPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {dotnetUseCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-semibold text-white">{useCase.category}</h3>
                 <div className="flex items-center gap-2">
@@ -190,7 +190,7 @@ export default function DotNetPage() {
           .NET Code Examples
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
               🚀 C# Console Application
             </h3>
@@ -236,7 +236,7 @@ namespace HelloDotNet
             </pre>
           </div>
 
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
               🌐 ASP.NET Core Web API
             </h3>
@@ -292,7 +292,7 @@ public class User
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with .NET
         </h3>

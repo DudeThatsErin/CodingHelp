@@ -38,15 +38,15 @@ export default function HTMLCSSPage() {
     >
 
       {/* What You'll Learn */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           📚 What You'll Learn
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Layout className="w-5 h-5 text-blue-600" />
-              <h4 className="font-semibold text-white">HTML Fundamentals</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">HTML Fundamentals</h4>
             </div>
             <ul className="flex flex-col gap-2">
               {htmlBasics.map((item, index) => (
@@ -59,7 +59,7 @@ export default function HTMLCSSPage() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Palette className="w-5 h-5 text-blue-600" />
-              <h4 className="font-semibold text-white">CSS Fundamentals</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">CSS Fundamentals</h4>
             </div>
             <ul className="flex flex-col gap-2">
               {cssBasics.map((item, index) => (
@@ -79,14 +79,14 @@ export default function HTMLCSSPage() {
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Hands-on Tutorial: Build Your First Web Page</h2>
         </div>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <div className="flex flex-col gap-6 text-gray-300">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <div className="flex flex-col gap-6 text-gray-600 dark:text-gray-300">
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
-                <h4 className="font-semibold text-white">Create a basic HTML file</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Create a basic HTML file</h4>
               </div>
-              <p className="text-sm mb-3">Create a file called <code className="bg-gray-700 px-1 rounded">index.html</code> and add this structure:</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Create a file called <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">index.html</code> and add this structure:</p>
               <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,9 +104,9 @@ export default function HTMLCSSPage() {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
-                <h4 className="font-semibold text-white">Add semantic HTML structure</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Add semantic HTML structure</h4>
               </div>
-              <p className="text-sm mb-3">Expand your HTML with proper semantic elements:</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Expand your HTML with proper semantic elements:</p>
               <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`<body>
     <header>
         <h1>Welcome to My Site</h1>
@@ -139,9 +139,9 @@ export default function HTMLCSSPage() {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
-                <h4 className="font-semibold text-white">Add CSS styling</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Add CSS styling</h4>
               </div>
-              <p className="text-sm mb-3">Create a <code className="bg-gray-700 px-1 rounded">style.css</code> file and link it in your HTML head:</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Create a <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">style.css</code> file and link it in your HTML head:</p>
               <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`/* In your HTML head: */
 <link rel="stylesheet" href="style.css">
 
@@ -190,9 +190,9 @@ nav a:hover {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
-                <h4 className="font-semibold text-white">Style the main content</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Style the main content</h4>
               </div>
-              <p className="text-sm mb-3">Add styling for the main content area:</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Add styling for the main content area:</p>
               <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`main {
     max-width: 800px;
     margin: 2rem auto;
@@ -228,9 +228,9 @@ footer {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">5</span>
-                <h4 className="font-semibold text-white">Make it responsive</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Make it responsive</h4>
               </div>
-              <p className="text-sm mb-3">Add responsive design with CSS media queries:</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Add responsive design with CSS media queries:</p>
               <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -266,9 +266,9 @@ footer {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">6</span>
-                <h4 className="font-semibold text-white">Test and view your page</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Test and view your page</h4>
               </div>
-              <p className="text-sm mb-3">Open your <code className="bg-gray-700 px-1 rounded">index.html</code> file in a web browser to see your creation!</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">Open your <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">index.html</code> file in a web browser to see your creation!</p>
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500 mt-3">
                 <p className="text-blue-800 dark:text-blue-200 text-sm">
                   💡 <strong>Pro tips:</strong> Right-click → "Inspect Element" to see the HTML structure, try resizing your browser window to test responsiveness, and experiment with different colors and fonts!
@@ -292,8 +292,8 @@ footer {
             and content of a webpage using elements and tags.
           </p>
           
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Basic HTML Structure:</h4>
+          <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">Basic HTML Structure:</h4>
             <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
 {`<!DOCTYPE html>
 <html lang="en">
@@ -344,8 +344,8 @@ footer {
             positioning, and responsive behavior.
           </p>
           
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Basic CSS Example:</h4>
+          <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">Basic CSS Example:</h4>
             <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
 {`/* Reset and base styles */
 * {
@@ -411,8 +411,8 @@ nav a:hover {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🔧 Flexbox Layout</h3>
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-3">🔧 Flexbox Layout</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Perfect for one-dimensional layouts and component alignment.
             </p>
@@ -426,8 +426,8 @@ nav a:hover {
             </pre>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">📱 CSS Grid</h3>
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-3">📱 CSS Grid</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Powerful two-dimensional layout system for complex designs.
             </p>
@@ -444,8 +444,8 @@ nav a:hover {
       </section>
 
       {/* Learning Resources */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           📖 Recommended Learning Resources
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -473,8 +473,8 @@ nav a:hover {
       </div>
 
       {/* Next Steps */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-4">
           🚀 Next Steps
         </h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -490,7 +490,7 @@ nav a:hover {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/web-development"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

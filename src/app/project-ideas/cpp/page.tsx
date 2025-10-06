@@ -284,7 +284,7 @@ export default function CppProjectsPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {beginnerProjects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{project.title}</h3>
                 <div className="flex items-center space-x-2">
@@ -324,7 +324,7 @@ export default function CppProjectsPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {intermediateProjects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{project.title}</h3>
                 <div className="flex items-center space-x-2">
@@ -364,7 +364,7 @@ export default function CppProjectsPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {advancedProjects.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{project.title}</h3>
                 <div className="flex items-center space-x-2">

@@ -9,63 +9,63 @@ const quickStartCards = [
     title: 'Getting Started',
     description: 'New to programming? Start here to learn the basics and choose your first language.',
     href: '/getting-started',
-    icon: <BookOpen className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <BookOpen className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Programming Languages',
     description: 'Explore different programming languages and find the one that suits your goals.',
     href: '/languages',
-    icon: <Code className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Code className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Web Development',
     description: 'Learn to build websites and web applications with modern technologies.',
     href: '/web-development',
-    icon: <Globe className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Globe className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Mobile Development',
     description: 'Create mobile apps for iOS and Android using various frameworks.',
     href: '/mobile-development',
-    icon: <Brain className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Brain className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Data & Databases',
     description: 'Learn about data storage, databases, and data analysis techniques.',
     href: '/data-databases',
-    icon: <Database className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Database className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'DevOps & Tools',
     description: 'Master the tools and practices that make development more efficient.',
     href: '/devops-tools',
-    icon: <Settings className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Settings className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Resources',
     description: 'Find learning platforms, books, practice problems, and communities.',
     href: '/resources',
-    icon: <Lightbulb className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <Lightbulb className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'FAQ',
     description: 'Get answers to frequently asked questions about programming.',
     href: '/faq',
-    icon: <HelpCircle className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
+    icon: <HelpCircle className="w-8 h-8 text-gray-700 dark:text-white" />,
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
 export default function HomePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-8 md:gap-12">
       {/* Hero Section */}
       <div className="text-center py-12 md:py-20">
@@ -111,14 +111,14 @@ export default function HomePage() {
             >
               <div className="flex flex-col gap-3 md:gap-4">
                 <div className="flex items-center gap-3 xl:flex-col xl:items-start xl:gap-2">
-                  <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gray-700 flex-shrink-0">
+                  <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gray-200 dark:bg-gray-700 flex-shrink-0">
                     {card.icon}
                   </div>
-                  <h3 className="text-sm md:text-base font-semibold text-white">
+                  <h3 className="text-sm md:text-base font-semibold text-gray-900 dark:text-white">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-xs md:text-sm text-gray-300">
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
                   {card.description}
                 </p>
               </div>
@@ -128,11 +128,11 @@ export default function HomePage() {
       </div>
 
       {/* Community Section */}
-      <div className="bg-gray-800 rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6 border border-gray-700">
-        <h2 className="text-xl md:text-2xl font-bold text-white dark:text-white">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6 border border-gray-200/50 dark:border-gray-700">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
           Join Our Community
         </h2>
-        <p className="text-sm md:text-base text-white max-w-2xl mx-auto">
+        <p className="text-sm md:text-base text-gray-700 dark:text-white max-w-2xl mx-auto">
           Connect with fellow developers, get help with your coding questions, and share your knowledge 
           with others in our supportive community.
         </p>
@@ -164,30 +164,30 @@ export default function HomePage() {
           Featured Content
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-            <h3 className="font-semibold text-white mb-2">
+          <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200/50 dark:border-gray-700 p-6">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               🚀 Getting Started Guide
             </h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
               Complete beginner's guide to programming with step-by-step instructions.
             </p>
             <Link
               href="/getting-started"
-              className="text-blue-400 hover:underline text-sm font-medium"
+              className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
             >
               Read More →
             </Link>
           </div>
-          <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
-            <h3 className="font-semibold text-white mb-2">
+          <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200/50 dark:border-gray-700 p-6">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               💡 Best Practices
             </h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
               Learn industry best practices and coding standards for clean, maintainable code.
             </p>
             <Link
               href="/resources"
-              className="text-blue-400 hover:underline text-sm font-medium"
+              className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
             >
               Explore Resources →
             </Link>

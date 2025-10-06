@@ -9,28 +9,28 @@ const learningPaths = [
     description: 'Learn the building blocks of web development - structure and styling.',
     href: '/web-development/html-css',
     difficulty: 'Beginner',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Frontend Frameworks',
     description: 'Master modern JavaScript frameworks like React, Vue, and Angular.',
     href: '/web-development/frontend',
     difficulty: 'Intermediate',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Backend Development',
     description: 'Build server-side applications, APIs, and databases.',
     href: '/web-development/backend',
     difficulty: 'Intermediate',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Full Stack',
     description: 'Combine frontend and backend skills to build complete web applications.',
     href: '/web-development/fullstack',
     difficulty: 'Advanced',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -49,16 +49,12 @@ export default function WebDevelopmentPage() {
       title="Web Development"
       description="Learn to build modern web applications from frontend user interfaces to backend APIs. Master the technologies that power the internet."
       icon={<Globe className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/web-development/html-css",
-        label: "Start: HTML & CSS"
-      }}
     >
       {/* Header */}
       <div className="flex flex-col items-start p-4">
         <div className="flex items-center gap-3">
           <Globe className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Web Development
           </h1>
         </div>
@@ -105,7 +101,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Key Concepts */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 Key Web Development Concepts
         </h3>
@@ -120,11 +116,11 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with Web Development
         </h3>
-        <div className="flex flex-col gap-3 text-purple-800 dark:text-purple-200">
+        <div className="flex flex-col gap-3 text-gray-700 dark:text-purple-200">
           <p>
             <strong>New to web development?</strong> Start with HTML & CSS to learn the fundamentals 
             of web page structure and styling.

@@ -18,13 +18,15 @@ export default function JavaScriptFundamentalsPage() {
       }}
     >
       {/* Try This First Tutorial */}
-      <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-        <h3 className="font-semibold text-white mb-4">🚀 Try This First: JavaScript Basics</h3>
-        <div className="flex flex-col gap-6 text-gray-300">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          🚀 Try This First - Interactive JavaScript
+        </h3>
+        <div className="flex flex-col gap-6 text-gray-600 dark:text-gray-300">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
-              <h4 className="font-semibold text-white text-sm">Create variables and see their types</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white" text-sm>Create variables and see their types</h4>
             </div>
             <p className="text-sm mb-3">Open your browser console (F12) and try:</p>
             <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`let name = "Alex"
@@ -36,7 +38,7 @@ console.log(typeof name, typeof age, typeof isActive)`}</pre>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
-              <h4 className="font-semibold text-white text-sm">Create and call a function</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white" text-sm>Create and call a function</h4>
             </div>
             <p className="text-sm mb-3">Functions let you reuse code:</p>
             <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`function greet(person) {
@@ -50,7 +52,7 @@ console.log(greet(name))`}</pre>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
-              <h4 className="font-semibold text-white text-sm">Work with arrays and objects</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white" text-sm>Work with arrays and objects</h4>
             </div>
             <p className="text-sm mb-3">Store multiple values and access them:</p>
             <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`const colors = ["red", "green", "blue"]
@@ -64,7 +66,7 @@ console.log(colors.length)    // 3`}</pre>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
-              <h4 className="font-semibold text-white text-sm">Use conditions to make decisions</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white" text-sm>Use conditions to make decisions</h4>
             </div>
             <p className="text-sm mb-3">Control what happens based on data:</p>
             <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`if (age >= 18) {
@@ -84,10 +86,10 @@ console.log(status)`}</pre>
       </div>
 
       {/* Variables and Data Types */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Variables and Data Types</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Variable Declarations</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Variable declarations
@@ -112,22 +114,22 @@ let regex = /pattern/g;`}
           </pre>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-white mb-3">💡 Best Practices</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li>• Use <code className="bg-gray-700 px-1 rounded">const</code> by default</li>
-            <li>• Use <code className="bg-gray-700 px-1 rounded">let</code> when you need to reassign</li>
-            <li>• Avoid <code className="bg-gray-700 px-1 rounded">var</code> in modern JavaScript</li>
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-3">💡 Best Practices</h3>
+          <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+            <li>• Use <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">const</code> by default</li>
+            <li>• Use <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">let</code> when you need to reassign</li>
+            <li>• Avoid <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">var</code> in modern JavaScript</li>
             <li>• Use descriptive variable names</li>
           </ul>
         </div>
       </section>
 
       {/* Functions */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Functions</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Function Declarations and Expressions</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Function Declaration (hoisted)
@@ -169,10 +171,10 @@ const user = createUser({name: "Alice", age: 25, email: "alice@example.com"});`}
       </section>
 
       {/* Objects and Arrays */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Objects and Arrays</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Working with Objects</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Object Creation
@@ -202,7 +204,7 @@ const merged = Object.assign({}, person, {profession: "Developer"});`}
           </pre>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Array Methods</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`const numbers = [1, 2, 3, 4, 5];
@@ -235,10 +237,10 @@ const [first, second, ...rest] = numbers;`}
       </section>
 
       {/* Control Flow */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Control Flow</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Conditionals and Loops</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Conditionals
@@ -298,10 +300,10 @@ fruits.forEach((fruit, index) => {
       </section>
 
       {/* Error Handling */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Error Handling</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Try-Catch and Error Types</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic Error Handling
@@ -354,7 +356,7 @@ async function fetchData() {
       </section>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/languages/javascript"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"

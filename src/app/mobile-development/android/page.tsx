@@ -69,7 +69,7 @@ export default function AndroidDevelopmentPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {androidFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -85,7 +85,7 @@ export default function AndroidDevelopmentPage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Development Setup</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Required Tools</h3>
           <div className="flex flex-col gap-4 md:gap-6">
             <div>
@@ -115,7 +115,7 @@ export default function AndroidDevelopmentPage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Modern Android with Kotlin</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">MainActivity.kt</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`package com.example.myapp
@@ -207,7 +207,7 @@ fun CounterScreenPreview() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Key Android Development Concepts</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">App Components</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Activities:</strong> Single screen with user interface</li>
@@ -217,7 +217,7 @@ fun CounterScreenPreview() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Modern UI</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Jetpack Compose:</strong> Declarative UI toolkit</li>
@@ -227,7 +227,7 @@ fun CounterScreenPreview() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Architecture Components</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>ViewModel:</strong> UI-related data holder</li>
@@ -237,7 +237,7 @@ fun CounterScreenPreview() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Data & Storage</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>SharedPreferences:</strong> Key-value storage</li>
@@ -291,7 +291,7 @@ fun CounterScreenPreview() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Ideas</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Beginner Projects</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Calculator with Jetpack Compose</li>
@@ -302,7 +302,7 @@ fun CounterScreenPreview() {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Advanced Projects</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• E-commerce App with Payment Gateway</li>
@@ -316,7 +316,7 @@ fun CounterScreenPreview() {
       </section>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/mobile-development/ios"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

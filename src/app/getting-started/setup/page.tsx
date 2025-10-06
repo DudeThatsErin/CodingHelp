@@ -801,7 +801,7 @@ export default function SetupPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {languageSetup.map((lang, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">{lang.icon}</span>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -901,7 +901,7 @@ export default function SetupPage() {
       </div>
 
       {/* Troubleshooting */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           Common Setup Issues
         </h3>

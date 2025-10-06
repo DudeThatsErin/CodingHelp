@@ -140,7 +140,7 @@ export default function ExpoPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {expoFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -156,7 +156,7 @@ export default function ExpoPage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started with Expo</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Quick Setup</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`# Install Expo CLI
@@ -176,7 +176,7 @@ npx expo start
           </pre>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Basic Expo App Example</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`import React, { useState } from 'react';
@@ -395,7 +395,7 @@ eas update --branch preview`}
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Expo SDK Libraries</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Camera & Media</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-camera</li>
@@ -405,7 +405,7 @@ eas update --branch preview`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Location & Maps</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-location</li>
@@ -415,7 +415,7 @@ eas update --branch preview`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Notifications</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-notifications</li>
@@ -425,7 +425,7 @@ eas update --branch preview`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Storage & Auth</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-secure-store</li>
@@ -438,7 +438,7 @@ eas update --branch preview`}
       </section>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/mobile-development/react-native"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

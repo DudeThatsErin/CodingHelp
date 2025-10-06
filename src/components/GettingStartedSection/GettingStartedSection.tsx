@@ -7,7 +7,7 @@ export function GettingStartedSection({
   className = ""
 }: GettingStartedSectionProps) {
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700 ${className}`}>
+    <div className={`bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700 ${className}`}>
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
           {title}
@@ -42,7 +42,7 @@ export function GettingStartedSection({
                 {step.description}
               </p>
               {step.code && (
-                <div className="bg-gray-900 dark:bg-gray-950 rounded-md p-3 overflow-x-auto">
+                <div className="bg-gray-800 dark:bg-gray-950 rounded-md p-3 overflow-x-auto border border-gray-300 dark:border-gray-700">
                   <code className="text-gray-100 text-sm">
                     {step.code}
                   </code>

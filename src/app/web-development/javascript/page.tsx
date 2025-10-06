@@ -96,7 +96,7 @@ export default function JavaScriptPage() {
     >
 
       {/* What You'll Learn */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           📚 What You'll Learn
         </h3>
@@ -105,8 +105,8 @@ export default function JavaScriptPage() {
             <div key={index} className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-white text-sm">{item.title}</h4>
-                <p className="text-gray-300 text-xs">{item.description}</p>
+                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{item.title}</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{item.description}</p>
               </div>
             </div>
           ))}
@@ -119,9 +119,9 @@ export default function JavaScriptPage() {
           JavaScript Fundamentals
         </h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-white mb-4">🧭 Hands-on Tutorial: Using JavaScript</h3>
-          <div className="flex flex-col gap-6 text-gray-300">
+          <div className="flex flex-col gap-6 text-gray-600 dark:text-gray-300">
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
@@ -216,7 +216,7 @@ loadUsers()`}</pre>
         
         <div className="flex flex-col gap-4">
           {learningPath.map((phase, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {phase.step}
@@ -240,7 +240,7 @@ loadUsers()`}</pre>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {jsFrameworks.map((framework, index) => (
-            <Link key={index} href={framework.href} className="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+            <Link key={index} href={framework.href} className="block bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-colors">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                 <ArrowRight className="w-5 h-5 text-gray-400" />
@@ -277,7 +277,7 @@ loadUsers()`}</pre>
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with JavaScript
         </h3>
@@ -314,7 +314,7 @@ loadUsers()`}</pre>
       </div>
 
       {/* Learning Resources */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           📖 Recommended Learning Resources
         </h3>

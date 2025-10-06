@@ -155,7 +155,7 @@ export default function BotCommandsPage() {
                 href="https://github.com/DudeThatsErin/CodingHelpBot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-50/50 dark:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
               >
                 <Github className="w-4 h-4" />
                 <span>View Source Code</span>
@@ -184,7 +184,7 @@ export default function BotCommandsPage() {
             const isExpanded = expandedCategories.includes(category.id);
             
             return (
-              <div key={category.id} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <div key={category.id} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
                 <button
                   onClick={() => toggleCategory(category.id)}
                   className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
@@ -215,10 +215,10 @@ export default function BotCommandsPage() {
                 </button>
                 
                 {isExpanded && (
-                  <div className="border-t border-gray-200 dark:border-gray-700 p-6 bg-gray-50 dark:bg-gray-700/50">
+                  <div className="border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700 p-6 bg-gray-50 dark:bg-gray-700/50">
                     <div className="flex flex-col gap-6 md:gap-8">
                       {category.commands.map((command, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                        <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
                           <div className="mb-3">
                             <div className="flex items-center gap-2 mb-2">
                               <code className="text-lg font-mono font-semibold text-blue-600 dark:text-blue-400">
@@ -327,7 +327,7 @@ export default function BotCommandsPage() {
             href="https://github.com/DudeThatsErin/CodingHelpBot"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-50/50 dark:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
           >
             <Github className="w-4 h-4" />
             <span>Contribute on GitHub</span>

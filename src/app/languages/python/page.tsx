@@ -5,6 +5,8 @@ import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
 import { ContentList } from '@/components/ContentList';
+import { GettingStartedSection } from '@/components/GettingStartedSection';
+import { CodeBlock } from '@/components/CodeBlock';
 
 const pythonFeatures = [
   {
@@ -89,14 +91,6 @@ export default function PythonPage() {
     <PageLayout
       title="Python"
       description="Python is a high-level, interpreted programming language known for its simplicity and readability. It's perfect for beginners and powerful enough for complex applications in web development, data science, artificial intelligence, and more."
-      previousLink={{
-        href: "/languages",
-        label: "Back to Languages"
-      }}
-      nextLink={{
-        href: "/languages/javascript",
-        label: "Next: JavaScript"
-      }}
     >
 
       <QuickStats stats={[
@@ -142,9 +136,9 @@ export default function PythonPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {pythonUseCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-white">{useCase.category}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{useCase.category}</h3>
                 <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
@@ -165,25 +159,25 @@ export default function PythonPage() {
                   </span>
                 </div>
               </div>
-              <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">{useCase.description}</p>
-              <p className="text-blue-700 dark:text-blue-300 text-sm mb-4">{useCase.details}</p>
+              <p className="text-gray-700 dark:text-blue-200 text-sm mb-3">{useCase.description}</p>
+              <p className="text-gray-600 dark:text-blue-300 text-sm mb-4">{useCase.details}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 text-sm">Real-World Examples:</h4>
+                  <h4 className="font-semibold text-gray-800 dark:text-blue-100 mb-2 text-sm">Real-World Examples:</h4>
                   <div className="flex flex-wrap gap-1">
                     {useCase.examples.map((example, i) => (
-                      <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                      <span key={i} className="text-xs px-2 py-1 bg-blue-100/50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
                         {example}
                       </span>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 text-sm">Popular Frameworks:</h4>
+                  <h4 className="font-semibold text-gray-800 dark:text-blue-100 mb-2 text-sm">Popular Frameworks:</h4>
                   <div className="flex flex-wrap gap-1">
                     {useCase.frameworks.map((framework, i) => (
-                      <span key={i} className="text-xs px-2 py-1 bg-blue-200 dark:bg-blue-800/30 text-blue-800 dark:text-blue-200 rounded-full">
+                      <span key={i} className="text-xs px-2 py-1 bg-blue-200/50 dark:bg-blue-800/30 text-blue-800 dark:text-blue-200 rounded-full">
                         {framework}
                       </span>
                     ))}
@@ -195,48 +189,103 @@ export default function PythonPage() {
         </div>
       </section>
 
-      {/* Code Example */}
-      <section className="flex flex-col gap-6 md:gap-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Python Code Examples
-        </h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-            🚀 Getting Started - Basic Syntax
-          </h3>
-          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
-{`# Hello World and Basic Concepts
+      {/* Python Basic Syntax Tutorial */}
+      <GettingStartedSection
+        title="🐍 Python Basic Syntax Tutorial"
+        description="Learn Python fundamentals step by step with hands-on examples"
+        steps={[
+          {
+            title: "Hello World & Print Statements",
+            description: "Start with the classic 'Hello World' program and learn how to display output",
+            icon: <Zap className="w-5 h-5" />,
+            code: `# Your first Python program
 print("Hello, World!")
+print("Welcome to Python programming!")
 
-# Variables and Data Types
+# Print multiple values
+print("Name:", "Alice", "Age:", 25)`
+          },
+          {
+            title: "Variables & Data Types",
+            description: "Store and work with different types of data in Python",
+            icon: <Database className="w-5 h-5" />,
+            code: `# Basic data types
 name = "Alice"           # String
 age = 25                 # Integer
 height = 5.6             # Float
 is_student = True        # Boolean
 hobbies = ["reading", "coding", "gaming"]  # List
 
-# String formatting (f-strings)
+# Check data types
+print(type(name))        # <class 'str'>
+print(type(age))         # <class 'int'>`
+          },
+          {
+            title: "String Formatting",
+            description: "Learn different ways to format and combine strings with variables",
+            icon: <Code className="w-5 h-5" />,
+            code: `# F-strings (recommended)
 print(f"My name is {name}, I'm {age} years old")
 
-# Control Structures
+# Format method
+print("Hello {}, you are {} years old".format(name, age))
+
+# String concatenation
+print("Name: " + name + ", Age: " + str(age))`
+          },
+          {
+            title: "Control Structures",
+            description: "Make decisions in your code using if/else statements",
+            icon: <Brain className="w-5 h-5" />,
+            code: `# If-else statements
 if age >= 18:
     print("You're an adult!")
+elif age >= 13:
+    print("You're a teenager!")
 else:
-    print("You're a minor")
+    print("You're a child!")
 
-# Loops
+# Comparison operators: ==, !=, <, >, <=, >=
+# Logical operators: and, or, not`
+          },
+          {
+            title: "Loops & Iteration",
+            description: "Repeat actions and iterate through collections of data",
+            icon: <Users className="w-5 h-5" />,
+            code: `# For loops
 for hobby in hobbies:
     print(f"I enjoy {hobby}")
 
-# Functions
-def greet(name, age):
+# Range function
+for i in range(5):
+    print(f"Count: {i}")
+
+# While loops
+count = 0
+while count < 3:
+    print(f"Loop {count}")
+    count += 1`
+          },
+          {
+            title: "Functions",
+            description: "Create reusable blocks of code to organize your programs",
+            icon: <BookOpen className="w-5 h-5" />,
+            code: `# Define a function
+def greet(name, age=18):
     return f"Hello {name}, you are {age} years old!"
 
+# Call the function
 message = greet("Python", 32)
-print(message)`}
-          </pre>
-        </div>
-      </section>
+print(message)
+
+# Function with multiple return values
+def calculate(x, y):
+    return x + y, x - y, x * y
+
+add, sub, mul = calculate(10, 5)`
+          }
+        ]}
+      />
 
       {/* Project Ideas */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -245,9 +294,9 @@ print(message)`}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beginner Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🟢 Beginner Projects</h3>
-            <ul className="list-disc list-inside text-green-800 dark:text-green-200 text-sm [&>li]:mb-2">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🟢 Beginner Projects</h3>
+            <ul className="list-disc list-inside text-green-700 dark:text-green-200 text-sm [&>li]:mb-2">
               <li><strong>Password Generator:</strong> Create secure passwords with custom rules</li>
               <li><strong>Number Guessing Game:</strong> Interactive guessing game with hints</li>
               <li><strong>Unit Converter:</strong> Convert between different units (temperature, length, etc.)</li>
@@ -258,9 +307,9 @@ print(message)`}
           </div>
 
           {/* Intermediate Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🟡 Intermediate Projects</h3>
-            <ul className="list-disc list-inside text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-2">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🟡 Intermediate Projects</h3>
+            <ul className="list-disc list-inside text-yellow-700 dark:text-yellow-200 text-sm [&>li]:mb-2">
               <li><strong>Web Scraper:</strong> Extract data from websites using BeautifulSoup</li>
               <li><strong>Personal Budget Tracker:</strong> Track expenses with data visualization</li>
               <li><strong>Weather Dashboard:</strong> Display weather data with charts</li>
@@ -271,9 +320,9 @@ print(message)`}
           </div>
 
           {/* Advanced Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🔴 Advanced Projects</h3>
-            <ul className="list-disc list-inside text-red-800 dark:text-red-200 text-sm [&>li]:mb-2">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🔴 Advanced Projects</h3>
+            <ul className="list-disc list-inside text-red-700 dark:text-red-200 text-sm [&>li]:mb-2">
               <li><strong>Machine Learning Model:</strong> Build predictive models with scikit-learn</li>
               <li><strong>Web Application:</strong> Full-stack app with Django or Flask</li>
               <li><strong>Stock Price Predictor:</strong> Use ML to predict stock movements</li>
@@ -286,37 +335,37 @@ print(message)`}
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with Python
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Install Python</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Download from python.org or use package managers like Homebrew (Mac) or apt (Linux)</p>
+              <h4 className="font-semibold text-green-700 dark:text-green-100">Install Python</h4>
+              <p className="text-green-600 dark:text-green-200 text-sm">Download from python.org or use package managers like Homebrew (Mac) or apt (Linux)</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Choose an Editor</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">VS Code with Python extension, PyCharm, or even IDLE for beginners</p>
+              <h4 className="font-semibold text-green-700 dark:text-green-100">Choose an Editor</h4>
+              <p className="text-green-600 dark:text-green-200 text-sm">VS Code with Python extension, PyCharm, or even IDLE for beginners</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Program</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Start with print("Hello, World!") and build from there</p>
+              <h4 className="font-semibold text-green-700 dark:text-green-100">Write Your First Program</h4>
+              <p className="text-green-600 dark:text-green-200 text-sm">Start with print("Hello, World!") and build from there</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Master variables, data types, control structures, functions, and basic data structures</p>
+              <h4 className="font-semibold text-green-700 dark:text-green-100">Learn the Fundamentals</h4>
+              <p className="text-green-600 dark:text-green-200 text-sm">Master variables, data types, control structures, functions, and basic data structures</p>
             </div>
           </div>
         </div>

@@ -140,7 +140,7 @@ export default function AILanguagesToolsPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {programmingLanguages.map((lang, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{lang.icon}</span>
@@ -213,7 +213,7 @@ export default function AILanguagesToolsPage() {
               </h3>
               <div className="flex flex-col gap-3">
                 {category.tools.map((tool, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-3 rounded border border-blue-200 dark:border-blue-700">
+                  <div key={i} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-3 rounded border border-blue-200 dark:border-blue-700">
                     <div className="flex items-center justify-between mb-1">
                       <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{tool.name}</h4>
                       <span className={`text-xs px-2 py-1 rounded-full font-medium ${
@@ -305,7 +305,7 @@ export default function AILanguagesToolsPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/ai/build-ai"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

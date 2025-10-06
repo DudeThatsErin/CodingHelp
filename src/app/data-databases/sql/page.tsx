@@ -114,7 +114,7 @@ export default function SQLPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sqlConcepts.map((concept, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
@@ -131,7 +131,7 @@ export default function SQLPage() {
           Essential SQL Commands
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             📝 Basic SQL Operations
           </h3>
@@ -176,7 +176,7 @@ DELETE FROM users WHERE age < 25;`}
           Advanced SQL Concepts
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🔗 Joins and Relationships
           </h3>
@@ -227,7 +227,7 @@ WHERE id IN (
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {popularDatabases.map((db, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 {db.name}
               </h3>
@@ -320,7 +320,7 @@ WHERE id IN (
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/data-databases"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

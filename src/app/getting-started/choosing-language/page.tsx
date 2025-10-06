@@ -13,7 +13,7 @@ const languageComparisons = [
     pros: ['Easy to read', 'Versatile', 'Large community', 'Great for beginners'],
     cons: ['Slightly slower execution then other programming languages', 'Mobile development limitations'],
     icon: '🐍',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'JavaScript',
@@ -24,7 +24,7 @@ const languageComparisons = [
     pros: ['Essential for web', 'Versatile', 'Huge ecosystem', 'High demand'],
     cons: ['Can be confusing', 'Rapid changes', 'Might face compatibility issues with older/lesser known browsers'],
     icon: '🟨',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Java',
@@ -35,7 +35,7 @@ const languageComparisons = [
     pros: ['Platform independent', 'Strong typing', 'Enterprise standard', 'Stable'],
     cons: ['Verbose syntax', 'Slower development', 'Memory usage'],
     icon: '☕',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'C#',
@@ -46,7 +46,7 @@ const languageComparisons = [
     pros: ['Microsoft ecosystem', 'Strong typing', 'Good tooling', 'Versatile', 'options for easy ui in the form of winforms'],
     cons: ['Windows-centric', 'Learning curve', 'Microsoft dependency'],
     icon: '🔷',
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -174,7 +174,7 @@ export default function ChoosingLanguagePage() {
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎯 Use Cases:</h4>
                   <div className="flex flex-wrap gap-1">
                     {lang.useCases.map((useCase, i) => (
-                      <span key={i} className="px-2 py-1 bg-white dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                      <span key={i} className="px-2 py-1 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
                         {useCase}
                       </span>
                     ))}
@@ -197,7 +197,7 @@ export default function ChoosingLanguagePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[0.5rem]">
           {careerPaths.map((path, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{path.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{path.title}</h3>
@@ -245,7 +245,7 @@ export default function ChoosingLanguagePage() {
       </div>
 
       {/* Common Mistakes */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           ⚠️ Common Mistakes to Avoid
         </h3>
@@ -274,11 +274,11 @@ export default function ChoosingLanguagePage() {
       </div>
 
       {/* Final Recommendation */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 Our Recommendation
         </h3>
-        <div className="text-green-800 dark:text-green-200">
+        <div className="text-gray-700 dark:text-green-200">
           <p className="mb-3">
             <strong>For most beginners, we recommend starting with Python.</strong> Here's why:
           </p>

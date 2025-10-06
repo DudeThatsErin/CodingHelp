@@ -170,8 +170,8 @@ export default function FirstProgramPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {languageExamples.map((lang, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-              <div className="bg-gray-50 dark:bg-gray-900 px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
+              <div className="bg-gray-50 dark:bg-gray-900 px-6 py-3 border-b border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
                 <div className="flex items-center gap-3">
                   <span className="text-xl">{lang.icon}</span>
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white">
@@ -217,7 +217,7 @@ export default function FirstProgramPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {programmingConcepts.map((concept, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <Code className="w-5 h-5 text-purple-600" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.concept}</h3>
@@ -353,7 +353,7 @@ export default function FirstProgramPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/getting-started/setup"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

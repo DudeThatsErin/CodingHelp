@@ -94,7 +94,7 @@ export default function FullStackFrameworksPage() {
     >
 
       {/* Quick Reference */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
           <Layers className="w-5 h-5 mr-2" />
           Quick Reference: Full-Stack Framework Selection
@@ -133,7 +133,7 @@ export default function FullStackFrameworksPage() {
         
         <div className="grid grid-cols-1 gap-8">
           {fullStackFrameworks.map((framework, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -212,7 +212,7 @@ export default function FullStackFrameworksPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-white mb-3">React-Based</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nextjs.org/" className="hover:underline">Next.js Official</a></li>
@@ -221,7 +221,7 @@ export default function FullStackFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-white mb-3">Vue-Based</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nuxtjs.org/" className="hover:underline">Nuxt.js</a></li>
@@ -230,7 +230,7 @@ export default function FullStackFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-white mb-3">Other</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://kit.svelte.dev/" className="hover:underline">SvelteKit</a></li>

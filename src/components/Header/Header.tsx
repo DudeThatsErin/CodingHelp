@@ -51,6 +51,18 @@ export function Header({ children, className = '' }: HeaderProps) {
             >
               Resources
             </Link>
+            <Link 
+              href="/faq" 
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+            >
+              FAQ
+            </Link>
+            <Link 
+              href="/how-to-share-code" 
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+            >
+              How to Share Code
+            </Link>
             
             {/* Search */}
             <div className="flex items-center">
@@ -143,6 +155,20 @@ export function Header({ children, className = '' }: HeaderProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Resources
+              </Link>
+              <Link 
+                href="/faq"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link 
+                href="/how-to-share-code"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                How to Share Code
               </Link>
               
               {/* Mobile Search */}

@@ -256,7 +256,7 @@ export default function GitPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {gitConcepts.map((concept, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-orange-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
@@ -273,7 +273,7 @@ export default function GitPage() {
           Essential Git Commands
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🚀 Getting Started
           </h3>
@@ -314,7 +314,7 @@ git log --graph            # Visual branch representation`}
           Branching and Merging
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🌿 Working with Branches
           </h3>
@@ -453,7 +453,7 @@ git pull origin main`}
           </p>
           
           <div className="overflow-x-auto">
-            <table className="w-full bg-white dark:bg-gray-800 rounded-lg">
+            <table className="w-full bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg">
               <thead className="bg-yellow-100 dark:bg-yellow-900/30">
                 <tr>
                   <th className="px-4 py-3 text-left text-sm font-semibold text-yellow-900 dark:text-yellow-100">Aspect</th>
@@ -482,7 +482,7 @@ git pull origin main`}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gitPlatforms.map((platform, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 {platform.name}
               </h3>
@@ -533,7 +533,7 @@ git pull origin main`}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {category.resources.map((resource, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
+                  <div key={i} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{resource.name}</h4>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{resource.description}</p>
                     <a
@@ -625,7 +625,7 @@ git pull origin main`}
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/devops-tools"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

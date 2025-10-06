@@ -210,7 +210,7 @@ export default function AIDosAndDontsPage() {
       </div>
 
       {/* Key Principles */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Core Principles for Mid-Level Developers
         </h3>
@@ -251,7 +251,7 @@ export default function AIDosAndDontsPage() {
               </h3>
               <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
-                  <div key={i} className="bg-gray-800 p-4 rounded border border-gray-700">
+                  <div key={i} className="bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-gray-200/50 dark:border-gray-700">
                     <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
                       <span>{item.title}</span>
@@ -283,7 +283,7 @@ export default function AIDosAndDontsPage() {
               </h3>
               <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
-                  <div key={i} className="bg-gray-800 p-4 rounded border border-gray-700">
+                  <div key={i} className="bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-gray-200/50 dark:border-gray-700">
                     <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
                       <XCircle className="w-4 h-4 text-red-600" />
                       <span>{item.title}</span>
@@ -307,7 +307,7 @@ export default function AIDosAndDontsPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {ethicalConsiderations.map((consideration, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{consideration.principle}</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{consideration.description}</p>
               <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
@@ -327,7 +327,7 @@ export default function AIDosAndDontsPage() {
         </h2>
         <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
@@ -346,7 +346,7 @@ export default function AIDosAndDontsPage() {
       </section>
 
       {/* Best Practices Summary */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           📋 Quick Reference: AI Best Practices
         </h3>
@@ -382,7 +382,7 @@ export default function AIDosAndDontsPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/ai"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

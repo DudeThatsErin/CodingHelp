@@ -243,7 +243,7 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Why Prompt Engineering Matters */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Why Prompt Engineering Matters for Developers
         </h3>
@@ -276,7 +276,7 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {promptingTechniques.map((technique, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 {technique.technique}
               </h3>
@@ -313,7 +313,7 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {promptTemplates.map((template, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-2 mb-4">
                 <MessageSquare className="w-5 h-5 text-blue-600" />
                 <h3 className="text-lg font-bold text-white">
@@ -348,7 +348,7 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {advancedTechniques.map((technique, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-2 mb-3">
                 <Target className="w-5 h-5 text-purple-600" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{technique.name}</h3>
@@ -376,7 +376,7 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-start gap-3">
                 <Zap className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
@@ -395,12 +395,12 @@ export default function PromptEngineeringPage() {
       </section>
 
       {/* Practical Exercise */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Practice Exercise: Improve These Prompts
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Poor Prompt:</h4>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">"Write a sorting function"</p>
             
@@ -424,7 +424,7 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Tool-Specific Tips */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🛠️ Tool-Specific Prompting Tips
         </h3>
@@ -460,7 +460,7 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/ai/dos-donts"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

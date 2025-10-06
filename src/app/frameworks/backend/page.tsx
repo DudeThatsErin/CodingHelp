@@ -94,8 +94,8 @@ export default function BackendFrameworksPage() {
     >
 
       {/* Quick Reference */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
           <Server className="w-5 h-5 mr-2" />
           Quick Reference: Choosing a Backend Framework
         </h2>
@@ -133,7 +133,7 @@ export default function BackendFrameworksPage() {
         
         <div className="grid grid-cols-1 gap-8">
           {backendFrameworks.map((framework, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -212,8 +212,8 @@ export default function BackendFrameworksPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">JavaScript/Node.js</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">JavaScript/Node.js</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://expressjs.com/" className="hover:underline">Express.js Official</a></li>
               <li>• <a href="https://nestjs.com/" className="hover:underline">NestJS Framework</a></li>
@@ -221,7 +221,7 @@ export default function BackendFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-white mb-3">Python</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://www.djangoproject.com/" className="hover:underline">Django</a></li>
@@ -230,7 +230,7 @@ export default function BackendFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-white mb-3">Java & C#</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://spring.io/projects/spring-boot" className="hover:underline">Spring Boot</a></li>

@@ -103,7 +103,7 @@ export default function ReactNativePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reactNativeFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -122,7 +122,7 @@ export default function ReactNativePage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           <Link href="/mobile-development/react-native/setup" className="block group">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+            <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-colors">
               <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Settings className="w-6 h-6" />
@@ -156,7 +156,7 @@ export default function ReactNativePage() {
           </Link>
 
           <Link href="/mobile-development/react-native/components" className="block group">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+            <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-colors">
               <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Layers className="w-6 h-6" />
@@ -190,7 +190,7 @@ export default function ReactNativePage() {
           </Link>
 
           <Link href="/mobile-development/react-native/navigation" className="block group">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+            <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-colors">
               <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Navigation className="w-6 h-6" />
@@ -224,7 +224,7 @@ export default function ReactNativePage() {
           </Link>
 
           <Link href="/mobile-development/react-native/deployment" className="block group">
-            <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
+            <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-colors">
               <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Upload className="w-6 h-6" />
@@ -263,7 +263,7 @@ export default function ReactNativePage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Quick Start Guide</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Quick Setup</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`# Install React Native CLI
@@ -286,7 +286,7 @@ npx react-native run-ios`}
           </pre>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Basic Component Example</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`import React, { useState } from 'react';
@@ -421,7 +421,7 @@ export default App;`}
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Libraries & Tools</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Navigation</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• React Navigation</li>
@@ -430,7 +430,7 @@ export default App;`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">State Management</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Redux Toolkit</li>
@@ -439,7 +439,7 @@ export default App;`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">UI Components</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• NativeBase</li>
@@ -448,7 +448,7 @@ export default App;`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Networking</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Axios</li>
@@ -457,7 +457,7 @@ export default App;`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Storage</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• AsyncStorage</li>
@@ -466,7 +466,7 @@ export default App;`}
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Testing</h3>
             <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Jest</li>

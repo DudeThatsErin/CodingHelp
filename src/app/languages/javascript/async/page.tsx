@@ -29,9 +29,9 @@ export default function JavaScriptAsyncPage() {
       </div>
 
       {/* Try This First Tutorial */}
-      <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-        <h3 className="font-semibold text-white mb-4">🎯 Try This First: Async Step-by-Step</h3>
-        <div className="flex flex-col gap-6 text-gray-300">
+      <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+        <h3 className="font-semibold text-gray-900 dark:text-white mb-4">🎯 Try This First: Async Step-by-Step</h3>
+        <div className="flex flex-col gap-6 text-gray-600 dark:text-gray-300">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
@@ -116,7 +116,7 @@ getUser()`}</pre>
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Callbacks</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Understanding Callbacks</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic Callback Example
@@ -166,8 +166,8 @@ function readFile(filename, callback) {
           </pre>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-white mb-3">⚠️ Callback Hell Problems</h3>
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-3">⚠️ Callback Hell Problems</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>• Deeply nested code that's hard to read</li>
             <li>• Difficult error handling</li>
@@ -181,7 +181,7 @@ function readFile(filename, callback) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Promises</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Promise Basics</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Creating a Promise
@@ -261,7 +261,7 @@ Promise.race([
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Async/Await</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Modern Async Syntax</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic Async/Await
@@ -369,7 +369,7 @@ async function processAllUsers() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Fetch API</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Modern HTTP Requests</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic GET Request
@@ -497,9 +497,9 @@ async function fetchWithRetry(url, options = {}, maxRetries = 3) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Understanding the Event Loop</h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-white mb-4">💡 How JavaScript Handles Async</h3>
-          <div className="space-y-3 text-gray-300 text-sm">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">💡 How JavaScript Handles Async</h3>
+          <div className="space-y-3 text-gray-600 dark:text-gray-300 text-sm">
             <p><strong>Call Stack:</strong> Where function calls are executed</p>
             <p><strong>Web APIs:</strong> Browser APIs (setTimeout, fetch, DOM events)</p>
             <p><strong>Callback Queue:</strong> Where callbacks wait to be executed</p>
@@ -507,7 +507,7 @@ async function fetchWithRetry(url, options = {}, maxRetries = 3) {
           </div>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Event Loop Example</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`console.log('1'); // Synchronous
@@ -545,8 +545,8 @@ Promise.resolve().then(() => console.log('micro 2'));
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Async Best Practices</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">✅ Do</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">✅ Do</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Use async/await for cleaner code</li>
               <li>• Handle errors with try/catch</li>
@@ -556,8 +556,8 @@ Promise.resolve().then(() => console.log('micro 2'));
             </ul>
           </div>
           
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">❌ Don't</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">❌ Don't</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Forget to handle promise rejections</li>
               <li>• Use async/await in loops unnecessarily</li>
@@ -570,7 +570,7 @@ Promise.resolve().then(() => console.log('micro 2'));
       </section>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/languages/javascript/frameworks"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"

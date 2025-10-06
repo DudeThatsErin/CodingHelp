@@ -10,7 +10,7 @@ const backendLanguages = [
     pros: ['Same language as frontend', 'Large ecosystem (npm)', 'Great for real-time apps', 'Fast development'],
     cons: ['Single-threaded', 'CPU-intensive tasks', 'Callback complexity'],
     frameworks: ['Express.js', 'Fastify', 'Koa.js', 'NestJS'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Python',
@@ -18,7 +18,7 @@ const backendLanguages = [
     pros: ['Easy to learn', 'Rich libraries', 'Great for AI/ML', 'Clean syntax'],
     cons: ['Slower execution', 'GIL limitations', 'Mobile development'],
     frameworks: ['Django', 'Flask', 'FastAPI', 'Pyramid'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Java',
@@ -26,7 +26,7 @@ const backendLanguages = [
     pros: ['Platform independent', 'Strong typing', 'Enterprise ready', 'Great performance'],
     cons: ['Verbose syntax', 'Slow startup', 'Memory usage'],
     frameworks: ['Spring Boot', 'Quarkus', 'Micronaut', 'Play Framework'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Go',
@@ -34,7 +34,7 @@ const backendLanguages = [
     pros: ['Fast compilation', 'Built-in concurrency', 'Simple syntax', 'Great performance'],
     cons: ['Limited generics', 'Smaller ecosystem', 'Learning curve'],
     frameworks: ['Gin', 'Echo', 'Fiber', 'Chi'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -77,14 +77,14 @@ export default function BackendDevelopmentPage() {
       }}
     >
       {/* What is Backend Development */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🖥️ What is Backend Development?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-white dark:text-white mb-2">Backend Responsibilities:</h4>
-            <ul className="text-white dark:text-white text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Backend Responsibilities:</h4>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Server-side logic and business rules</li>
               <li>• Database operations and data management</li>
               <li>• API development and integration</li>
@@ -94,8 +94,8 @@ export default function BackendDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-white dark:text-white mb-2">Key Technologies:</h4>
-            <ul className="text-white dark:text-white text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Technologies:</h4>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Programming languages (Node.js, Python, Java, Go)</li>
               <li>• Web frameworks (Express, Django, Spring)</li>
               <li>• Databases (PostgreSQL, MongoDB, Redis)</li>
@@ -113,7 +113,7 @@ export default function BackendDevelopmentPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {backendConcepts.map((concept, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
@@ -136,7 +136,7 @@ export default function BackendDevelopmentPage() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {lang.name}
                 </h3>
-                <span className="text-sm px-3 py-1 bg-white dark:bg-gray-800 rounded-full font-medium">
+                <span className="text-sm px-3 py-1 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-full font-medium">
                   Popular Choice
                 </span>
               </div>
@@ -147,7 +147,7 @@ export default function BackendDevelopmentPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Pros:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">✅ Pros:</h4>
                   <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.pros.map((pro, i) => (
                       <li key={i}>• {pro}</li>
@@ -155,7 +155,7 @@ export default function BackendDevelopmentPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">❌ Cons:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">❌ Cons:</h4>
                   <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.cons.map((con, i) => (
                       <li key={i}>• {con}</li>
@@ -163,7 +163,7 @@ export default function BackendDevelopmentPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🛠️ Frameworks:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">🛠️ Frameworks:</h4>
                   <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.frameworks.map((framework, i) => (
                       <li key={i}>• {framework}</li>
@@ -182,8 +182,8 @@ export default function BackendDevelopmentPage() {
           API Development
         </h2>
         
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-4">
             🔗 RESTful API Example (Express.js)
           </h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
@@ -248,8 +248,8 @@ app.listen(3000, () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🗄️ SQL Databases</h3>
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-3">🗄️ SQL Databases</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Structured data with relationships, ACID compliance, and complex queries.
             </p>
@@ -260,8 +260,8 @@ app.listen(3000, () => {
             </ul>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">📄 NoSQL Databases</h3>
+          <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-3">📄 NoSQL Databases</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Flexible schema, horizontal scaling, and document-based storage.
             </p>
@@ -280,8 +280,8 @@ app.listen(3000, () => {
           Authentication & Security
         </h2>
         
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-lg font-semibold text-white mb-4">
+        <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             🔒 Security Best Practices
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -308,8 +308,8 @@ app.listen(3000, () => {
       </section>
 
       {/* Learning Path */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 Backend Learning Path
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -352,8 +352,8 @@ app.listen(3000, () => {
       </div>
 
       {/* Practice Projects */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           💡 Backend Project Ideas
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -14,7 +14,7 @@ const frontendFrameworks = [
     pros: ['Large ecosystem', 'Virtual DOM', 'Flexible', 'Strong job market', 'Excellent tooling'],
     cons: ['Steep learning curve', 'Frequent updates', 'JSX syntax', 'Configuration complexity'],
     useCases: ['Single Page Applications', 'Complex UIs', 'Enterprise applications', 'Mobile apps (React Native)'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Vue.js',
@@ -27,7 +27,7 @@ const frontendFrameworks = [
     pros: ['Easy to learn', 'Great documentation', 'Flexible', 'Small bundle size', 'Template syntax'],
     cons: ['Smaller ecosystem', 'Less job opportunities', 'Composition API complexity', 'Language barrier'],
     useCases: ['Rapid prototyping', 'Progressive enhancement', 'Small to medium apps', 'Enterprise applications'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Angular',
@@ -40,7 +40,7 @@ const frontendFrameworks = [
     pros: ['Full framework', 'TypeScript by default', 'Enterprise-ready', 'Powerful CLI', 'Dependency injection'],
     cons: ['Complex', 'Heavy', 'Steep learning curve', 'Verbose', 'Frequent breaking changes'],
     useCases: ['Large enterprise applications', 'Complex business logic', 'Teams preferring structure', 'Long-term projects'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'Svelte',
@@ -53,7 +53,7 @@ const frontendFrameworks = [
     pros: ['No virtual DOM', 'Small bundle size', 'Easy to learn', 'Great performance', 'Less boilerplate'],
     cons: ['Smaller ecosystem', 'Less tooling', 'Newer framework', 'Limited job market', 'Smaller community'],
     useCases: ['Performance-critical apps', 'Small to medium projects', 'Developers wanting simplicity', 'Static sites'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'AngularJS',
@@ -66,7 +66,7 @@ const frontendFrameworks = [
     pros: ['Two-way data binding', 'Dependency injection', 'Mature ecosystem', 'MVC architecture'],
     cons: ['Legacy framework', 'Performance issues', 'Complex digest cycle', 'No longer maintained'],
     useCases: ['Legacy applications', 'Maintenance projects', 'Not recommended for new projects'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     name: 'jQuery',
@@ -79,7 +79,7 @@ const frontendFrameworks = [
     pros: ['Easy to learn', 'Cross-browser compatibility', 'Large plugin ecosystem', 'Simple syntax'],
     cons: ['DOM-heavy approach', 'Not suitable for complex apps', 'Performance issues', 'Outdated patterns'],
     useCases: ['Simple websites', 'Legacy projects', 'Quick DOM manipulation', 'Learning JavaScript'],
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -108,7 +108,7 @@ export default function FrontendFrameworksPage() {
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {frameworkStats.map((stat, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
             <div className="flex items-center gap-2 mb-2">
               <div className="text-blue-600">{stat.icon}</div>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">{stat.label}</span>
@@ -119,14 +119,14 @@ export default function FrontendFrameworksPage() {
       </div>
 
       {/* What are Frontend Frameworks */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎨 What are Frontend Frameworks?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Purpose:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-gray-800 dark:text-blue-100 mb-2">Purpose:</h4>
+            <ul className="text-gray-700 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Structure and organize frontend code</li>
               <li>• Provide reusable UI components</li>
               <li>• Handle state management and data flow</li>
@@ -232,7 +232,7 @@ export default function FrontendFrameworksPage() {
       </section>
 
       {/* Learning Path */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Frontend Framework Learning Path
         </h3>
@@ -269,7 +269,7 @@ export default function FrontendFrameworksPage() {
       </div>
 
       {/* Recommendations */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           💡 Framework Recommendations
         </h3>

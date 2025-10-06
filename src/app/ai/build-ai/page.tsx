@@ -250,7 +250,7 @@ export default function BuildAIPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {aiProjectTypes.map((project, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                   {project.type}
@@ -417,7 +417,7 @@ export default function BuildAIPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {toolsAndFrameworks.map((category, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 {category.category}
               </h3>
@@ -481,7 +481,7 @@ export default function BuildAIPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
         <Link
           href="/ai/prompting"
           className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"

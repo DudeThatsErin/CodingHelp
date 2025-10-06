@@ -12,7 +12,7 @@ const aiCategories = [
     examples: ['Ethical considerations', 'Code review practices', 'Learning balance', 'Dependency risks'],
     href: '/ai/dos-donts',
     icon: <Shield className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Prompt Engineering',
@@ -20,7 +20,7 @@ const aiCategories = [
     examples: ['Clear instructions', 'Context setting', 'Iterative refinement', 'Output formatting'],
     href: '/ai/prompting',
     icon: <Lightbulb className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Building Your Own AI',
@@ -28,7 +28,7 @@ const aiCategories = [
     examples: ['ML fundamentals', 'Model training', 'API integration', 'Deployment strategies'],
     href: '/ai/build-ai',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'AI Languages & Tools',
@@ -36,7 +36,7 @@ const aiCategories = [
     examples: ['Python ecosystem', 'JavaScript AI', 'Cloud platforms', 'Development tools'],
     href: '/ai/languages-tools',
     icon: <Zap className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -76,10 +76,6 @@ export default function AIPage() {
       title="AI & Machine Learning"
       description="Explore artificial intelligence and machine learning concepts, tools, and applications. From basic algorithms to advanced neural networks."
       icon={<Brain className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/ai/languages-tools",
-        label: "Start: AI Languages & Tools"
-      }}
     >
 
       <QuickStats 
@@ -139,11 +135,11 @@ export default function AIPage() {
       </div>
 
       {/* AI for Mid-Level Programmers */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 AI for Mid-Level Programmers
         </h3>
-        <div className="flex flex-col gap-4 md:gap-6 text-blue-800 dark:text-blue-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-gray-700 dark:text-blue-200">
           <p>
             As a mid-level programmer, you're in the perfect position to leverage AI effectively. 
             You have enough experience to understand code quality and architecture, but can benefit 
@@ -208,7 +204,7 @@ export default function AIPage() {
               
               <div className="flex flex-wrap gap-1">
                 {category.examples.map((example, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
                     {example}
                   </span>
                 ))}
@@ -223,7 +219,7 @@ export default function AIPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           AI Applications in Programming
         </h2>
-        <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-900">
@@ -278,7 +274,7 @@ export default function AIPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {skillLevels.map((level, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                   {level.level}
@@ -312,7 +308,7 @@ export default function AIPage() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with AI
         </h3>
@@ -349,7 +345,7 @@ export default function AIPage() {
       </div>
 
       {/* Current AI Landscape */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🌍 Current AI Landscape (2024)
         </h3>
@@ -393,7 +389,7 @@ export default function AIPage() {
           <Link
             key={category.href}
             href={category.href}
-            className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+            className="flex flex-col items-center p-4 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 hover:shadow-md transition-shadow"
           >
             <div className="text-gray-600 dark:text-gray-400 mb-2">{category.icon}</div>
             <span className="text-sm font-medium text-gray-900 dark:text-white text-center">

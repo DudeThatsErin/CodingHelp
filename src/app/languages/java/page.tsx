@@ -192,7 +192,7 @@ export default function JavaPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-red-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -210,9 +210,9 @@ export default function JavaPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaUseCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-white">{useCase.category}</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{useCase.category}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                   useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -239,8 +239,8 @@ export default function JavaPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Java Code Example
         </h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="bg-gray-50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-4">
             Hello World & Basic Class Example
           </h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
@@ -293,7 +293,7 @@ public class Person {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {javaLearningPath.map((phase, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
@@ -334,7 +334,7 @@ public class Person {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaFrameworks.map((framework, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                 <div className="flex items-center gap-2">
@@ -374,13 +374,13 @@ public class Person {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {javaResources.map((category, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-bold text-white mb-4">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {category.resources.map((resource, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-blue-200 dark:border-blue-700">
+                  <div key={i} className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-blue-200 dark:border-blue-700">
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{resource.name}</h4>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{resource.description}</p>
                     <a
@@ -406,8 +406,8 @@ public class Person {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beginner Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🟢 Beginner Projects</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🟢 Beginner Projects</h3>
             <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>Student Management System:</strong> CRUD operations with file storage</li>
               <li>• <strong>Banking System:</strong> Account management with basic transactions</li>
@@ -419,8 +419,8 @@ public class Person {
           </div>
 
           {/* Intermediate Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🟡 Intermediate Projects</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🟡 Intermediate Projects</h3>
             <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>E-commerce Backend:</strong> REST API with Spring Boot and JPA</li>
               <li>• <strong>Chat Application:</strong> Multi-client chat using sockets</li>
@@ -432,8 +432,8 @@ public class Person {
           </div>
 
           {/* Advanced Projects */}
-          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-            <h3 className="font-semibold text-white mb-3">🔴 Advanced Projects</h3>
+          <div className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">🔴 Advanced Projects</h3>
             <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>Microservices Architecture:</strong> Distributed system with Spring Cloud</li>
               <li>• <strong>Real-time Trading System:</strong> High-frequency trading platform</li>
@@ -447,8 +447,8 @@ public class Person {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with Java
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

@@ -111,10 +111,6 @@ export default function LanguagesPage() {
       title="Programming Languages"
       description="Explore different programming languages, their strengths, use cases, and learning paths. Choose the right language for your projects and career goals."
       icon={<Code className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/languages/python",
-        label: "Start: Python"
-      }}
     >
 
       {/* How to Choose */}

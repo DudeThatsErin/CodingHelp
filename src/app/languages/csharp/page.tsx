@@ -192,7 +192,7 @@ export default function CSharpPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {csharpFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-indigo-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -210,9 +210,9 @@ export default function CSharpPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {csharpUseCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-white">{useCase.category}</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{useCase.category}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                   useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -239,8 +239,8 @@ export default function CSharpPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C# Code Example
         </h2>
-        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-4">
             Hello World & Basic Class Example
           </h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
@@ -319,7 +319,7 @@ class Program
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {csharpLearningPath.map((phase, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
@@ -332,7 +332,7 @@ class Program
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Topics to Learn:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2 text-sm">Topics to Learn:</h4>
                   <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.topics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
@@ -340,7 +340,7 @@ class Program
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Practice Projects:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2 text-sm">Practice Projects:</h4>
                   <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.projects.map((project, i) => (
                       <li key={i}>• {project}</li>
@@ -360,7 +360,7 @@ class Program
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {csharpFrameworks.map((framework, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-white dark:bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                 <div className="flex items-center gap-2">
@@ -400,14 +400,14 @@ class Program
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {csharpResources.map((category, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-bold text-white mb-4">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {category.resources.map((resource, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-blue-200 dark:border-blue-700">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{resource.name}</h4>
+                  <div key={i} className="bg-white dark:bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 p-4 rounded border border-blue-200 dark:border-blue-700">
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-900 dark:text-white mb-2">{resource.name}</h4>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{resource.description}</p>
                     <a
                       href={resource.url}
@@ -426,8 +426,8 @@ class Program
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with C#
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -465,3 +465,4 @@ class Program
     </PageLayout>
   );
 }
+

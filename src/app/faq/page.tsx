@@ -79,11 +79,11 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { id: string; question: strin
   const buttonId = `faq-button-${faq.id}`;
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
+    <div className="border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 shadow-sm">
       <button
         id={buttonId}
         onClick={onToggle}
-        className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-800 border border-gray-700 hover:border-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-lg"
+        className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
         aria-expanded={isOpen}
         aria-controls={contentId}
         aria-describedby={contentId}
@@ -92,27 +92,25 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { id: string; question: strin
           {faq.question}
         </span>
         {isOpen ? (
-          <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 transform rotate-180 transition-transform" aria-hidden="true" />
+          <ChevronDown className="w-5 h-5 text-gray-600 dark:text-gray-400 flex-shrink-0 transition-transform" aria-hidden="true" />
         ) : (
-          <ChevronRight className="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform" aria-hidden="true" />
+          <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-400 flex-shrink-0 transition-transform" aria-hidden="true" />
         )}
       </button>
-      <div
-        id={contentId}
-        className={`overflow-hidden transition-all duration-200 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-        aria-labelledby={buttonId}
-        role="region"
-      >
-        <div className="px-6 pb-4 border-t border-gray-200 dark:border-gray-700">
+      {isOpen && (
+        <div
+          id={contentId}
+          className="px-6 pb-4 border-t border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-750"
+          aria-labelledby={buttonId}
+          role="region"
+        >
           <div className="pt-4">
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {faq.answer}
             </p>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
@@ -132,8 +130,11 @@ export default function FAQPage() {
     <PageLayout
       title="Frequently Asked Questions"
       description="Find answers to the most common questions about programming, learning to code, and using this wiki effectively."
+      icon={<HelpCircle className="w-8 h-8 text-blue-600" />}
     >
+      <div className="flex flex-col gap-8 bg-gray-50/30 dark:bg-gray-900/30 rounded-xl p-6">
         {/* FAQ Items */}
+        <div className="space-y-4">
           {faqData.map((faq, index) => (
             <FAQItem 
               key={faq.id} 
@@ -142,9 +143,10 @@ export default function FAQPage() {
               onToggle={() => toggleItem(index)}
             />
           ))}
+        </div>
 
         {/* Still Have Questions */}
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800 shadow-sm">
           <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
             Still Have Questions?
           </h3>
@@ -157,7 +159,7 @@ export default function FAQPage() {
               href="https://discord.gg/geQEUBm"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-sm"
             >
               💬 Ask on Discord
             </a>
@@ -165,7 +167,7 @@ export default function FAQPage() {
               href="https://reddit.com/r/CodingHelp"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors shadow-sm"
             >
               🤝 Post on Reddit
             </a>
@@ -173,18 +175,19 @@ export default function FAQPage() {
         </div>
 
         {/* Contributing */}
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg p-6 border border-gray-300 dark:border-gray-700 shadow-sm">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Help Improve This FAQ
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Notice a question that should be added? Have a better answer for an existing question? 
             We welcome contributions from the community to make this resource better for everyone.
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             You can suggest improvements by reaching out to us on Discord or Reddit.
           </p>
         </div>
+      </div>
     </PageLayout>
   );
 }

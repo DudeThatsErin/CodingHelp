@@ -1,49 +1,14 @@
-import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { PageLayoutProps } from './types';
 
 export function PageLayout({
   children,
   title,
   description,
-  icon,
-  previousLink,
-  nextLink
+  icon
 }: PageLayoutProps) {
-  const NavigationSection = ({ className = "" }: { className?: string }) => {
-    if (!previousLink && !nextLink) return null;
-
-    return (
-      <nav className={`flex flex-col md:flex-row items-center justify-between gap-4 ${className}`} role="navigation" aria-label="Page navigation">
-        <div className="flex-1">
-          {previousLink && (
-            <Link
-              href={previousLink.href}
-              className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline pb-2 md:pb-0"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>{previousLink.label}</span>
-            </Link>
-          )}
-        </div>
-        
-        <div className="flex-1 flex justify-end">
-          {nextLink && (
-            <Link
-              href={nextLink.href}
-              className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              <span>{nextLink.label}</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          )}
-        </div>
-      </nav>
-    );
-  };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-3 md:gap-4">
         {/* Skip Navigation Links */}
         <div className="sr-only focus-within:not-sr-only">
@@ -53,16 +18,7 @@ export function PageLayout({
           >
             Skip to main content
           </a>
-          <a
-            href="#page-navigation"
-            className="absolute top-4 left-40 bg-blue-600 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Skip to navigation
-          </a>
         </div>
-
-        {/* Header Navigation */}
-        <NavigationSection />
 
         {/* Page Header */}
         <header className="flex flex-col gap-2 md:gap-3">
@@ -88,11 +44,6 @@ export function PageLayout({
         >
           {children}
         </main>
-
-        {/* Footer Navigation */}
-        <div id="page-navigation">
-          <NavigationSection className="pt-8 border-t border-gray-200 dark:border-gray-700" />
-        </div>
       </div>
     </div>
   );

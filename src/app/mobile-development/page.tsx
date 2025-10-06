@@ -11,7 +11,7 @@ const mobileFrameworks = [
     popularity: 'Very High',
     useCases: ['Cross-platform apps', 'Social media', 'E-commerce', 'Productivity'],
     href: '/mobile-development/react-native',
-    color: 'bg-gray-800 border-gray-700',
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700',
     icon: '⚛️',
     companies: ['Facebook', 'Instagram', 'Uber', 'Discord']
   },
@@ -22,7 +22,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Rapid prototyping', 'Startups', 'MVPs', 'Over-the-air updates'],
     href: '/mobile-development/expo',
-    color: 'bg-gray-800 border-gray-700',
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700',
     icon: '🚀',
     companies: ['Expo', 'Many startups', 'Indie developers']
   },
@@ -33,7 +33,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Cross-platform apps', 'High-performance UI', 'Custom designs'],
     href: '/mobile-development/flutter',
-    color: 'bg-gray-800 border-gray-700',
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700',
     icon: '🐦',
     companies: ['Google', 'Alibaba', 'BMW', 'eBay']
   },
@@ -44,7 +44,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['iOS-only apps', 'Performance-critical', 'Platform-specific features'],
     href: '/mobile-development/ios',
-    color: 'bg-gray-800 border-gray-700',
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700',
     icon: '🍎',
     companies: ['Apple', 'Most iOS apps']
   },
@@ -55,7 +55,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Android-only apps', 'Performance-critical', 'Platform-specific features'],
     href: '/mobile-development/android',
-    color: 'bg-gray-800 border-gray-700',
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700',
     icon: '🤖',
     companies: ['Google', 'Most Android apps']
   }
@@ -94,10 +94,6 @@ export default function MobileDevelopmentPage() {
       title="Mobile Development"
       description="Build native and cross-platform mobile applications for iOS and Android. Learn the tools, frameworks, and best practices for mobile app development."
       icon={<Smartphone className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/mobile-development/react-native",
-        label: "Start: React Native"
-      }}
     >
       {/* Header */}
       <div className="flex flex-col items-start p-4">
@@ -122,7 +118,7 @@ export default function MobileDevelopmentPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mobileFeatures.map((feature, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <div key={index} className="bg-gray-50/50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -139,7 +135,7 @@ export default function MobileDevelopmentPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Choose Your Mobile Framework</h2>
         <div className="flex flex-col gap-4">
           {mobileFrameworks.map((framework, index) => (
-            <Link key={index} href={framework.href} className="block bg-gray-800 p-4 md:p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all">
+            <Link key={index} href={framework.href} className="block bg-gray-50/50 dark:bg-gray-800 p-4 md:p-6 rounded-lg border border-gray-200/50 dark:border-gray-700 hover:border-gray-600 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
@@ -201,7 +197,7 @@ export default function MobileDevelopmentPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Framework Comparison</h2>
         
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+          <table className="min-w-full bg-white dark:bg-gray-50/50 dark:bg-gray-800 border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 rounded-lg">
             <thead className="bg-gray-50 dark:bg-gray-700">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Framework</th>

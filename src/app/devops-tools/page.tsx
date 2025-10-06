@@ -10,7 +10,7 @@ const devopsCategories = [
     examples: ['Git', 'GitHub', 'GitLab', 'Bitbucket'],
     href: '/devops-tools/git',
     icon: <GitBranch className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'IDEs & Editors',
@@ -18,7 +18,7 @@ const devopsCategories = [
     examples: ['VS Code', 'IntelliJ', 'Vim', 'Sublime Text'],
     href: '/devops-tools/editors',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Testing',
@@ -26,7 +26,7 @@ const devopsCategories = [
     examples: ['Jest', 'Pytest', 'JUnit', 'Cypress'],
     href: '/devops-tools/testing',
     icon: <TestTube className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   },
   {
     title: 'Deployment',
@@ -34,7 +34,7 @@ const devopsCategories = [
     examples: ['Docker', 'Kubernetes', 'AWS', 'Vercel'],
     href: '/devops-tools/deployment',
     icon: <Rocket className="w-6 h-6" />,
-    color: 'bg-gray-800 border-gray-700'
+    color: 'bg-gray-50/50 dark:bg-gray-800 border-gray-200/50 dark:border-gray-700'
   }
 ];
 
@@ -55,10 +55,6 @@ export default function DevOpsToolsPage() {
       title="DevOps & Tools"
       description="Master the tools and practices that streamline development, deployment, and operations. From version control to containerization and CI/CD pipelines."
       icon={<Settings className="w-8 h-8 text-blue-600" />}
-      nextLink={{
-        href: "/devops-tools/git",
-        label: "Start: Git & Version Control"
-      }}
     >
       <QuickStats 
         title="DevOps & Tools Overview"
@@ -85,11 +81,11 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* What is DevOps */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🔄 What is DevOps?
         </h3>
-        <div className="flex flex-col gap-4 md:gap-6 text-purple-800 dark:text-purple-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-gray-700 dark:text-purple-200">
           <p>
             <strong>DevOps</strong> is a set of practices that combines software development (Dev) and 
             IT operations (Ops) to shorten the development lifecycle and provide continuous delivery 
@@ -157,7 +153,7 @@ export default function DevOpsToolsPage() {
               
               <div className="flex flex-wrap gap-1">
                 {category.examples.map((example, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
                     {example}
                   </span>
                 ))}
@@ -172,7 +168,7 @@ export default function DevOpsToolsPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           DevOps Lifecycle
         </h2>
-        <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-gray-50/50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-200/50 dark:border-gray-700 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-900">
@@ -215,8 +211,8 @@ export default function DevOpsToolsPage() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-        <h3 className="text-lg font-semibold text-white mb-4">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Getting Started with DevOps
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -252,7 +248,7 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* Popular Tool Combinations */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           🛠️ Popular Tool Combinations
         </h3>
@@ -297,7 +293,7 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* Career Paths */}
-      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+      <div className="bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-white mb-4">
           💼 DevOps Career Paths
         </h3>
