@@ -7,8 +7,8 @@ import { SearchModal } from '@/components/SearchModal';
 import { Header } from '@/components/Header';
 import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { Analytics } from '@vercel/analytics/react';
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://coding-help.vercel.app'),
@@ -62,8 +62,8 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <Analytics />
-        <SpeedInsights />
+        {/* <Analytics /> */}
+        {/* <SpeedInsights /> */}
         <ThemeProvider>
           <SearchProvider>
             <div className="min-h-screen bg-white dark:bg-gray-900 flex">
