@@ -100,7 +100,7 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { id: string; question: strin
       {isOpen && (
         <div
           id={contentId}
-          className="px-6 pb-4 border-t border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-750"
+          className="px-6 pb-4 border-t border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"
           aria-labelledby={buttonId}
           role="region"
         >
