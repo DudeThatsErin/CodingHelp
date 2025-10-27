@@ -120,23 +120,6 @@ export default function BotCommandsPage() {
       description="Our Discord bot provides helpful commands for getting coding assistance, managing discussions, and accessing community resources."
       icon={<div className="text-4xl">🤖</div>}
     >
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🤖</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Discord Bot Commands</h1>
-            <p className="text-gray-600 dark:text-gray-300">
-              CodingHelp Discord Bot command reference
-            </p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Our Discord bot provides helpful commands for coding challenges, community interaction, 
-          learning resources, and server management. Browse the categories below to find the commands you need.
-        </p>
-      </div>
-
       {/* Bot Info */}
       <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
         <div className="flex items-start space-x-4">
